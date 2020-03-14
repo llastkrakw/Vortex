@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Vortex</string>
+    <string name="txt_nom_app_splashscreen1">V</string>
+    <string name="txt_nom_app_splashscreen2">O</string>
+    <string name="txt_nom_app_splashscreen3">RTEX</string>
+    <string name="version">copyright vortex 2020</string>
+    <!-- bording title -->
+    <string name="onboarding_text1">Let\'s Travel</string>
+    <string name="onboarding_text2">Plan trip</string>
+    <string name="onboarding_text3">Book a travel</string>
+    <string name="onboarding_text4">Book a taxi</string>
+    <string name="onboarding_text5">Welcome on Vortex</string>
+    <!-- bording body -->
+    <string name="onboarding_body">
+        Your new travel companion, Vortex bring you to all your destinations.
+        Travel faster by avoiding bad weather and enjoy your trip.
+    </string>
+    <string name="onboarding_body2">
+        Businessman, travel lover… Plan your trips in advance, anytime and anywhere !
+        Vortex offers you the best planning experience.
+    </string>
+    <string name="onboarding_body3">
+        Search and compare the best offers from the best agencies for your trip.
+        Locate the agencies closest you, as well as the hotels near your destination
+    </string>
+    <string name="onboarding_body4">
+        Do you need a taxi to go and out from the agency ? Our Psiit service offers
+        you the opportunity to get in touch with professionals in the trade.
+    </string>
+    <string name="onboarding_body5">Welcome on Vortex</string>
+    <string name="test">test</string>
+    <string name="signin_subtitle">please sign in to inter on our app</string>
+    <string name="signin_title">Sign In</string>
+    <string name="hint_email">username or email@gmail.com</string>
+    <string name="hint_password">password</string>
+    <string name="text_view_text1_cb_login">Remember me</string>
+    <string name="forgot_password">Forgot password ?</string>
+    <string name="have_acount">Don\'t have account ?</string>
+    <string name="register_now">Register now.</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_subtitle">Please sign up and access to better content</string>
+    <string name="username">Username</string>
+    <string name="email">email@gmail.com</string>
+    <string name="phone">6*********</string>
+    <string name="send_me_email">Send me email</string>
+    <string name="terms_license">I accepts terms and license</string>
+</resources>

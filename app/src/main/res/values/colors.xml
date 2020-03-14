@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#AA55FF</color>
+    <color name="colorAccent">#AA55FF</color>
+    <color name="couleurdefond1">#AA55FF</color>
+    <color name="blanc">#FEFEFE</color>
+    <color name="noir">#000000</color>
+    <color name="important">#FFC600</color>
+    <color name="my_red">#D81B60</color>
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+
+
+
+    <color name="tab_indicator_gray">#2F2B9E</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+
+</resources>

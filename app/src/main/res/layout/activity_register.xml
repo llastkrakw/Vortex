@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/degrade_de_fond">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_back"
+            android:contentDescription="@string/test" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="56dp"
+            android:contentDescription="@string/test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bulle" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            app:srcCompat="@drawable/logo2" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:text="@string/sign_up_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="172dp"
+            android:text="@string/sign_up_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/register_username"
+            style="@style/edit_text"
+            android:layout_marginTop="17dp"
+            android:drawableStart="@drawable/icon_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_chainStyle="spread"
+            android:autofillHints="@string/test"
+            android:inputType="text"
+            tools:ignore="LabelFor"
+            android:hint="@string/username"/>
+
+        <EditText
+            android:id="@+id/register_email"
+            style="@style/edit_text"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_message2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_username"
+            android:autofillHints="@string/test"
+            android:inputType="textEmailAddress"
+            tools:ignore="LabelFor"
+            android:hint="@string/email"/>
+
+        <LinearLayout
+            android:id="@+id/register_linear1"
+            android:layout_marginTop="10dp"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_email">
+
+            <Spinner
+                android:id="@+id/register_spinner"
+                style="@style/spinner"
+                android:layout_marginEnd="10dp"
+                />
+
+            <EditText
+                android:id="@+id/register_phone"
+                style="@style/edit_text"
+                android:layout_width="220dp"
+                android:drawableStart="@drawable/icon_phone"
+                android:autofillHints="@string/test"
+                android:inputType="phone"
+                tools:ignore="LabelFor"
+                android:hint="@string/phone"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/register_password"
+            style="@style/edit_text"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_show_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_linear1"
+            android:autofillHints="@string/test"
+            android:inputType="textPassword"
+            tools:ignore="LabelFor"
+            android:hint="@string/hint_password"/>
+
+        <EditText
+            android:id="@+id/register_password_verify"
+            style="@style/edit_text"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/icon_show_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_password"
+            android:autofillHints="@string/test"
+            android:inputType="textPassword"
+            tools:ignore="LabelFor"
+            android:hint="@string/hint_password"/>
+
+        <LinearLayout
+            android:id="@+id/register_linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_password_verify">
+
+            <CheckBox
+                android:id="@+id/register_checkbox"
+                style="@style/chcek_box_indicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="38dp"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/send_me_email"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="447dp" />
+
+            <CheckBox
+                android:id="@+id/register_checkbox2"
+                style="@style/chcek_box_indicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/terms_license"
+                android:textColor="@color/important"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="447dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonRegister"
+            style="@style/button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/sign_up_title"
+            android:elevation="25dp"
+            android:translationZ="10dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_linear2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
