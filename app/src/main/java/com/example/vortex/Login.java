@@ -13,6 +13,7 @@ public class Login extends AppCompatActivity {
 
     private Button btn_sign_in_login;
     private TextView register;
+    private TextView forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,20 @@ public class Login extends AppCompatActivity {
 
 
         register = (TextView) findViewById(R.id.login_register);
+        forgot = (TextView) findViewById(R.id.login_forgot);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this,Register.class);
+                startActivity(intent);
+            }
+        });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this,ResetPasswordFirst.class);
                 startActivity(intent);
             }
         });

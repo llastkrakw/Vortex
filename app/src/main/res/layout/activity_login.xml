@@ -159,7 +159,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linear_login1">
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonNext1"
                 style="@style/button"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -180,7 +180,7 @@
                 android:paddingTop="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonLogin">
+                app:layout_constraintTop_toBottomOf="@+id/buttonNext1">
 
                 <TextView
                     android:id="@+id/textView4"

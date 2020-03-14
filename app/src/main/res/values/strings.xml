@@ -44,4 +44,13 @@
     <string name="phone">6*********</string>
     <string name="send_me_email">Send me email</string>
     <string name="terms_license">I accepts terms and license</string>
+    <string name="reset_password_title1">Please enter your registered email to reset password</string>
+    <string name="recover">Recover password</string>
+    <string name="mail_check_title">Check your mails</string>
+    <string name="mail_check_subtitle">We have send you new password on your register email address</string>
+    <string name="go_mail">Go to mail</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_password_subtitle">Please enter your hold and your new password</string>
+    <string name="hold">hold password</string>
+    <string name="newp">new password</string>
 </resources>
