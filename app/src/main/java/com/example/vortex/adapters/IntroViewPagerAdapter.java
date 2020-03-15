@@ -1,4 +1,4 @@
-package com.example.vortex;
+package com.example.vortex.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.vortex.R;
+import com.example.vortex.models.forview.ScreenItem;
 
 import java.util.List;
 

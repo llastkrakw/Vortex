@@ -1,4 +1,4 @@
-package com.example.vortex;
+package com.example.vortex.splah;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -11,10 +11,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Adapter;
 import android.widget.Button;
-import android.widget.TableLayout;
 
+import com.example.vortex.loginAndRegister.Login;
+import com.example.vortex.R;
+import com.example.vortex.adapters.IntroViewPagerAdapter;
+import com.example.vortex.models.forview.ScreenItem;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;

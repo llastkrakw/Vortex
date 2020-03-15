@@ -1,4 +1,4 @@
-package com.example.vortex;
+package com.example.vortex.splah;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+
+import com.example.vortex.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen.this,IntroActivity.class));
+                startActivity(new Intent(SplashScreen.this, IntroActivity.class));
                 finish();
             }
         },5000);

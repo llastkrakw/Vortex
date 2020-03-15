@@ -1,4 +1,4 @@
-package com.example.vortex;
+package com.example.vortex.models.forview;
 
 public class ScreenItem {
 

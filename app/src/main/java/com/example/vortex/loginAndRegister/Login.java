@@ -1,13 +1,14 @@
-package com.example.vortex;
+package com.example.vortex.loginAndRegister;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.vortex.R;
 
 public class Login extends AppCompatActivity {
 

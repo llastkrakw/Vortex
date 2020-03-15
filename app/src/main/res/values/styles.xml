@@ -21,7 +21,7 @@
     </style>
     <style name="login_title">
 
-        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textColor">@color/blanc</item>
 
@@ -47,12 +47,6 @@
         <item name="android:paddingStart">10dp</item>
     </style>
 
-    <style name="test" parent="sub_title">
-        <item name="android:background">@drawable/back_ground_edit_login</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:textColorHint">@color/blanc</item>
-    </style>
 
     <style name="chcek_box_indicator1">
         <item name="android:textColor">@color/blanc</item>
