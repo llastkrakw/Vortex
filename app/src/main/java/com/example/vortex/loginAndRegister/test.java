@@ -27,7 +27,6 @@ public class test extends AppCompatActivity {
     ImageView mImageView;
 
     TextView mId, mName, mEmail;
-
     Button mSignout;
 
     @Override

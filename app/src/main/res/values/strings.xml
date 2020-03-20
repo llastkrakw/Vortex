@@ -1,4 +1,5 @@
 <resources>
+    <string name="server_client_id">547129611807-gaqhjoj8mhjvbhb3puno97dfpeb4fkfv.apps.googleusercontent.com</string>
     <string name="app_name">Vortex</string>
     <string name="txt_nom_app_splashscreen1">V</string>
     <string name="txt_nom_app_splashscreen2">O</string>
@@ -53,4 +54,8 @@
     <string name="reset_password_subtitle">Please enter your hold and your new password</string>
     <string name="hold">hold password</string>
     <string name="newp">new password</string>
+    <string name="PhoneVerification">Phone Verification</string>
+    <string name="yourphone">Your phone number</string>
+    <string name="getstar">Get started !</string>
+    <string name="sendme">Send me code</string>
 </resources>
