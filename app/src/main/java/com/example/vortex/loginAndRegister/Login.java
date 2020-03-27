@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.vortex.R;
+import com.example.vortex.main.MainActivity;
 
 public class Login extends AppCompatActivity {
 
@@ -21,9 +22,17 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        btn_sign_in_login = (Button) findViewById(R.id.buttonLogin);
         register = (TextView) findViewById(R.id.login_register);
         forgot = (TextView) findViewById(R.id.login_forgot);
+
+        btn_sign_in_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent main = new Intent(Login.this, MainActivity.class);
+                startActivity(main);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

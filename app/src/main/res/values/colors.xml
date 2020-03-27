@@ -13,7 +13,7 @@
     <color name="gradient_end_color">#18a3fe</color>
 
 
-
+    <color name="focusColor">#2F2B9E</color>
 
     <color name="tab_indicator_gray">#2F2B9E</color>
     <color name="intro_title_color">#000000</color>

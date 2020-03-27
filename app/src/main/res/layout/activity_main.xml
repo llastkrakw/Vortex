@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc"
+    tools:context=".main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3EFF0"/>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:active_item_color="@color/important"
+        app:active_centre_button_background_color="@color/focusColor"
+        app:centre_button_color="@color/focusColor"
+        app:inactive_item_color="#FEFEFE"
+        app:space_background_color="@color/colorPrimaryDark"
+        app:centre_button_icon="@drawable/ic_confirmation_number_black_24dp"
+        app:active_centre_button_icon_color="@color/important"
+        app:inactive_centre_button_icon_color="#FEFEFE"
+        app:space_item_icon_size="32dp"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</RelativeLayout>
