@@ -59,4 +59,15 @@
     <string name="getstar">Get started !</string>
     <string name="sendme">Send me code</string>
     <string name="plan_your_tripe">Plan your tripe</string>
+    <string name="forth">Forth</string>
+    <string name="forth2">Forth and back</string>
+    <string name="history">Travel history</string>
+    <string name="depart">Depart from</string>
+    <string name="arrival">Arrival At</string>
+    <string name="date_test">21-10-2001</string>
+    <string name="search">Search and compare</string>
+    <string name="vip">VIP</string>
+    <string name="classic">Classic</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
 </resources>

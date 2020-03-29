@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".main.MainActivity"></activity>
+        <activity android:name=".main.MainActivity"/>
         <activity android:name=".loginAndRegister.Otp" />
         <activity android:name=".loginAndRegister.test" />
         <activity android:name=".loginAndRegister.ResetPasswordThird" />

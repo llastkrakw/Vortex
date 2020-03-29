@@ -8,7 +8,7 @@
     tools:context=".main.fragments.MainFragment">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="@drawable/top_bg"
@@ -47,6 +47,289 @@
         android:text="@string/plan_your_tripe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/travel_container1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view1"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:checkedButton="@id/rb1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_bias="0">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_button"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/forth"
+            android:textColorLink="@color/colorAccent"
+            app:useMaterialThemeColors="false"
+            android:textColor="@color/colorPrimary" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textColorLink="@color/colorAccent"
+            app:useMaterialThemeColors="false"
+            android:button="@drawable/radio_button"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/forth2"
+            android:textColor="@color/colorPrimary" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/container2"
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:background="@drawable/travel_container3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view2" >
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:contentDescription="@string/test"
+            android:src="@drawable/composant4" />
+
+        <TextView
+            android:id="@+id/textDepart"
+            style="@style/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/imageView9"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/depart"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/nice_spinner"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@id/imageView9"
+            android:background="@drawable/spinner_radius"
+            android:drawableStart="@drawable/vileloc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:arrowDrawable="@drawable/list_arrow"
+            app:arrowTint="@color/blanc"
+            app:backgroundSelector="@drawable/spinner_radius"
+            app:popupTextAlignment="center" />
+
+        <TextView
+            android:id="@+id/textArrival"
+            style="@style/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="65dp"
+            android:layout_toEndOf="@id/imageView9"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/arrival"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/nice_spinner2"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="85dp"
+            android:layout_toEndOf="@id/imageView9"
+            android:background="@drawable/spinner_radius"
+            android:drawableStart="@drawable/vileloc"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:arrowDrawable="@drawable/list_arrow"
+            app:arrowTint="@color/blanc"
+            app:backgroundSelector="@drawable/spinner_radius"
+            app:popupTextAlignment="center" />
+
+        <TextView
+            android:id="@+id/valueDepart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/nice_spinner"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:textSize="32sp"
+            style="@style/login_title"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#202020"/>
+
+        <TextView
+            android:id="@+id/valueArrival"
+            style="@style/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_toEndOf="@id/nice_spinner2"
+            android:textColor="#202020"
+            android:textSize="32sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/historyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@drawable/travel_container2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:id="@+id/textHistory"
+            style="@style/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/history"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/btnhistory"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_toEndOf="@id/textHistory"
+            android:layout_marginStart="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/test"
+            android:src="@drawable/ic_history_gray_24dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/spinner_radius"
+        android:drawableStart="@drawable/composant2"
+        android:drawableEnd="@drawable/ic_youtube_searched_for_black_24dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/blanc"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="24sp"
+        android:text="@string/date_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container2" />
+
+    <View
+        android:id="@+id/classes"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/classe_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/classes"
+        app:layout_constraintEnd_toEndOf="@id/classes"
+        app:layout_constraintStart_toStartOf="@id/classes"
+        app:layout_constraintTop_toTopOf="@id/classes">
+
+        <CheckBox
+            android:id="@+id/vip"
+            style="@style/chcek_box_indicator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/vip"
+            android:textColor="@color/colorPrimary" />
+
+        <CheckBox
+            android:id="@+id/classic"
+            style="@style/chcek_box_indicator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:text="@string/classic"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search"
+        style="@style/button2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:drawableEnd="@drawable/ic_search_black_24dp"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/search"
+        android:textColor="@color/blanc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/classes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,17 @@
 package com.example.vortex.main;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.vortex.R;
+import com.example.vortex.main.fragments.DatePiker;
 import com.example.vortex.main.fragments.MainFragment;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = MainFragment.newInstance();
         fragmentTransaction.add(R.id.container, fragment);
         fragmentTransaction.commit();
+
+
 
         spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
             @Override
