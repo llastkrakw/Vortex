@@ -5,6 +5,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,8 +14,12 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -23,7 +29,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.animation.BaseAnimation;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.vortex.R;
+import com.example.vortex.adapters.TravelSmalAdapter;
+import com.example.vortex.fakeForUi.TravelFake;
 
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.OnSpinnerItemSelectedListener;
@@ -32,6 +43,9 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
+import static com.example.vortex.main.fragments.AnimUtils.slideView;
 
 public class MainFragment extends Fragment{
 
@@ -42,7 +56,6 @@ public class MainFragment extends Fragment{
     private TextView depart;
     private ImageView historyButton;
     private Button date;
-    private boolean isExpend = false;
     private List<String> dataset2;
     private Context context;
 
@@ -55,6 +68,7 @@ public class MainFragment extends Fragment{
                              @Nullable Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.main_fragment, container, false);
+        context = rootView.getContext();
         if(container != null){
             niceSpinner = (NiceSpinner) rootView.findViewById(R.id.nice_spinner);
             niceSpinner2 = (NiceSpinner) rootView.findViewById(R.id.nice_spinner2);
@@ -62,6 +76,8 @@ public class MainFragment extends Fragment{
             depart =  (TextView) rootView.findViewById(R.id.valueDepart);
             date = (Button) rootView.findViewById(R.id.date);
             historyButton = (ImageView) rootView.findViewById(R.id.btnhistory);
+
+
         }
 
         List<String> dataset = new LinkedList<>(Arrays.asList("Douala", "Yaounde", "Bamenda", "Kousserie", "Bafang"));
@@ -71,7 +87,6 @@ public class MainFragment extends Fragment{
         niceSpinner.attachDataSource(dataset);
         niceSpinner2.attachDataSource(dataset);
         niceSpinner2.setSelectedIndex(1);
-        context = rootView.getContext();
         return rootView;
     }
 
@@ -138,6 +153,7 @@ public class MainFragment extends Fragment{
                  builder.create().show();
             }
         });
+
     }
 
 

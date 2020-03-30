@@ -70,4 +70,8 @@
     <string name="classic">Classic</string>
     <string name="ok">Ok</string>
     <string name="cancel">Cancel</string>
+    <string name="ville1">Douala</string>
+    <string name="ville2">Yaounde</string>
+    <string name="from">from</string>
+    <string name="time">/ 5h</string>
 </resources>

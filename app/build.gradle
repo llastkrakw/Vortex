@@ -42,8 +42,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
     implementation 'com.mikhaellopez:circularimageview:4.2.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.github.armcha:SpaceNavigationView:1.6.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
 }
