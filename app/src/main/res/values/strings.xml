@@ -74,4 +74,17 @@
     <string name="ville2">Yaounde</string>
     <string name="from">from</string>
     <string name="time">/ 5h</string>
+    <string name="book">Book your tripe</string>
+    <string name="search_hint">Search to compare</string>
+    <string name="dla">DLA</string>
+    <string name="yde">YDE</string>
+    <string name="tiret">-</string>
+    <string name="match">Match list</string>
+    <string-array name="query_suggestions">
+        <item>Douala</item>
+        <item>Yaounde</item>
+        <item>Kousserie</item>
+        <item>Bamenda</item>
+        <item>Bafang</item>
+    </string-array>
 </resources>

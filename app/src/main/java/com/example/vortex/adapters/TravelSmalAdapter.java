@@ -44,7 +44,7 @@ public class TravelSmalAdapter extends RecyclerView.Adapter<TravelSmalAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         TravelFake travel = ListItem.get(position);
-         holder.agence.setImageBitmap(decodeSampledBitmapFromResource(view.getResources(), travel.getImage(), 60, 60));
+         holder.agence.setImageBitmap(decodeSampledBitmapFromResource(view.getResources(), travel.getImage(), 50, 50));
          holder.rating.setImageBitmap(decodeSampledBitmapFromResource(view.getResources(), travel.getRatingImage(), 60, 60));
         holder.ville1.setText(travel.getDepart());
         holder.ville2.setText(travel.getArrival());

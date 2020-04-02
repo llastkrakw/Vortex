@@ -9,6 +9,7 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.vortex.R;
 import com.example.vortex.adapters.TravelSmalAdapter;
 import com.example.vortex.fakeForUi.TravelFake;
+import com.example.vortex.main.BookActivity;
 
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.OnSpinnerItemSelectedListener;
@@ -56,6 +58,7 @@ public class MainFragment extends Fragment{
     private TextView depart;
     private ImageView historyButton;
     private Button date;
+    private Button search;
     private List<String> dataset2;
     private Context context;
 
@@ -75,6 +78,7 @@ public class MainFragment extends Fragment{
             arrival =  (TextView) rootView.findViewById(R.id.valueArrival);
             depart =  (TextView) rootView.findViewById(R.id.valueDepart);
             date = (Button) rootView.findViewById(R.id.date);
+            search = (Button) rootView.findViewById(R.id.search);
             historyButton = (ImageView) rootView.findViewById(R.id.btnhistory);
 
 
@@ -151,6 +155,14 @@ public class MainFragment extends Fragment{
                             }
                         });
                  builder.create().show();
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent book = new Intent(context, BookActivity.class);
+                startActivity(book);
             }
         });
 

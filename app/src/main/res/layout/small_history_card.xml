@@ -8,19 +8,19 @@
 <androidx.cardview.widget.CardView
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:background="@drawable/small_h_bg"
     app:cardBackgroundColor="@color/blanc"
     app:cardElevation="6dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:background="@drawable/small_h_bg"
         android:layout_height="match_parent">
 
 
         <ImageView
             android:id="@+id/agence_image"
             android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
             android:background="@drawable/classe_view"
@@ -36,7 +36,7 @@
             android:layout_toEndOf="@id/agence_image"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/ville1"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
             android:textSize="13sp" />
 
         <TextView
@@ -49,7 +49,7 @@
             android:layout_toEndOf="@id/name_ville1"
             android:fontFamily="@font/poppins_light"
             android:text="@string/from"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
             android:textSize="13sp" />
 
         <TextView
@@ -62,7 +62,7 @@
             android:layout_toEndOf="@id/from"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/ville2"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
             android:textSize="13sp" />
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_toEndOf="@id/agence_image"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/date_test"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
             android:textSize="13sp" />
 
         <TextView
@@ -88,7 +88,7 @@
             android:layout_toEndOf="@id/date"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/time"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
             android:textSize="13sp" />
 
         <ImageView

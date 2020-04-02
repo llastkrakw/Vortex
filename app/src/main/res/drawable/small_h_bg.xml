@@ -5,7 +5,7 @@
     android:color="#939595"
     android:dashWidth="10dp"
     android:dashGap="6dp"/>
-<padding android:left="7dp" android:top="7dp"
-    android:right="7dp" android:bottom="7dp" />
+<padding android:left="7dp"
+    android:right="7dp" />
 <corners android:radius="2dp" />
 </shape>
