@@ -9,14 +9,19 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.example.vortex.R;
+import com.example.vortex.main.fragments.BookListFragment;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
@@ -36,6 +41,9 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView location;
     private ImageView start;
     private FloatingSearchView searchView;
+    private FrameLayout fragmentContainer;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +51,8 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_book);
 
         spaceNavigationView = (SpaceNavigationView) findViewById(R.id.spacebook);
+        fragmentContainer = (FrameLayout) findViewById(R.id.fragment_container);
+        fragmentManager = this.getSupportFragmentManager();
         back = (ImageView) findViewById(R.id.backtomain);
         list = (ImageView) findViewById(R.id.list_buttton);
         location = (ImageView) findViewById(R.id.location_button);
@@ -100,6 +110,11 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 //searchView.swapSuggestions();
             }
         });
+
+        fragmentTransaction = fragmentManager.beginTransaction();
+        Fragment fragment = BookListFragment.newInstance();
+        fragmentTransaction.add(R.id.fragment_container,  fragment);
+        fragmentTransaction.commit();
 
     }
 

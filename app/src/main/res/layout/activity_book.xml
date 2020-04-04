@@ -128,7 +128,6 @@
         android:layout_height="390dp"
         android:layout_marginTop="26dp"
         android:background="@drawable/book_container_bg"
-        app:layout_constraintBottom_toBottomOf="@id/spacebook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,16 +135,17 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TextView
+            android:id="@+id/match"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/match"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="20sp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginTop="12dp"
-            android:textColor="@color/colorWhite"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@id/show_city"/>
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="70dp"
+            android:layout_toStartOf="@id/show_city"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/match"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:id="@+id/show_city"
@@ -186,6 +186,17 @@
                 android:textSize="24sp"/>
 
         </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="70dp"/>
+
     </RelativeLayout>
 
     <com.luseen.spacenavigation.SpaceNavigationView
@@ -193,19 +204,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:active_item_color="@color/important"
         app:active_centre_button_background_color="@color/focusColor"
-        app:centre_button_color="@color/focusColor"
-        app:inactive_item_color="#FEFEFE"
-        app:space_background_color="@color/colorPrimaryDark"
-        app:centre_button_icon="@drawable/ic_confirmation_number_black_24dp"
         app:active_centre_button_icon_color="@color/important"
+        app:active_item_color="@color/important"
+        app:centre_button_color="@color/focusColor"
+        app:centre_button_icon="@drawable/ic_confirmation_number_black_24dp"
         app:inactive_centre_button_icon_color="#FEFEFE"
-        app:space_item_icon_size="32dp"
+        app:inactive_item_color="#FEFEFE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:space_background_color="@color/colorPrimaryDark"
         app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_icon_size="32dp"
         app:space_item_text_size="@dimen/space_item_text_default_size" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

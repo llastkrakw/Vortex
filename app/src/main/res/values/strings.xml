@@ -80,6 +80,12 @@
     <string name="yde">YDE</string>
     <string name="tiret">-</string>
     <string name="match">Match list</string>
+    <string name="agence_name">Finex Voyage</string>
+    <string name="number_item">+3 more</string>
+    <string name="time2">5H</string>
+    <string name="hr1">8:00</string>
+    <string name="hr2">12h00</string>
+    <string name="price">Vip for 5000 fcfa</string>
     <string-array name="query_suggestions">
         <item>Douala</item>
         <item>Yaounde</item>
