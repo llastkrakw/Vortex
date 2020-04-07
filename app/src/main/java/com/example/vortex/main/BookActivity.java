@@ -1,5 +1,6 @@
 package com.example.vortex.main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,11 +23,20 @@ import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.example.vortex.R;
 import com.example.vortex.main.fragments.BookListFragment;
+import com.example.vortex.main.fragments.CarteFragment;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
-
+import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.maps.MapView;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.mapbox.mapboxsdk.maps.Style;
+import com.mapbox.mapboxsdk.maps.SupportMapFragment;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,11 +54,13 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     private FrameLayout fragmentContainer;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
+    private SupportMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
+
 
         spaceNavigationView = (SpaceNavigationView) findViewById(R.id.spacebook);
         fragmentContainer = (FrameLayout) findViewById(R.id.fragment_container);
@@ -116,6 +128,49 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.add(R.id.fragment_container,  fragment);
         fragmentTransaction.commit();
 
+
+        Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));
+
+        if (savedInstanceState == null) {
+
+            // Create fragment
+            //final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            // Build mapboxMap
+            MapboxMapOptions options = MapboxMapOptions.createFromAttributes(BookActivity.this, null);
+            options.camera(new CameraPosition.Builder()
+                    .target(new LatLng(-52.6885, -70.1395))
+                    .zoom(9)
+                    .build());
+
+            // Create map fragment
+            mapFragment = SupportMapFragment.newInstance(options);
+
+            // Add map fragment to parent container
+        } else {
+            mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentByTag("com.mapbox.map");
+        }
+
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(new OnMapReadyCallback() {
+                @Override
+                public void onMapReady(@NonNull MapboxMap mapboxMap) {
+                    mapboxMap.setStyle(Style.SATELLITE, new Style.OnStyleLoaded() {
+                        @Override
+                        public void onStyleLoaded(@NonNull Style style) {
+
+                            // Map is set up and the style has loaded. Now you can add data or make other map adjustments
+
+
+                        }
+                    });
+                }
+            });
+        }else {
+            mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentByTag("com.mapbox.map");
+        }
+
+
     }
 
 
@@ -126,11 +181,22 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 list.setBackground(getResources().getDrawable(R.drawable.button_list_bg));
                 location.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
                 start.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
+                //
+                //
+                fragmentTransaction = fragmentManager.beginTransaction();
+                Fragment fragment = BookListFragment.newInstance();
+                fragmentTransaction.replace(R.id.fragment_container,  fragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.location_button:
                 list.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
                 location.setBackground(getResources().getDrawable(R.drawable.button_list_bg));
                 start.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
+                //
+                //
+                final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.add(R.id.fragment_container, mapFragment, "com.mapbox.map");
+                transaction.commit();
                 break;
             case R.id.ratting_button:
                 list.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));

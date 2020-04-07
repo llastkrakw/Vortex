@@ -86,6 +86,7 @@
     <string name="hr1">8:00</string>
     <string name="hr2">12h00</string>
     <string name="price">Vip for 5000 fcfa</string>
+    <string name="map_token">pk.eyJ1IjoibGxhc3RrcmFrdyIsImEiOiJjazhuZngxdmIwcHJyM3JwOGk0c2RwaWMyIn0.yJcRNt8l2Y61YdXfBVCC4g</string>
     <string-array name="query_suggestions">
         <item>Douala</item>
         <item>Yaounde</item>
