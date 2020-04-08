@@ -64,11 +64,11 @@
     <string name="history">Travel history</string>
     <string name="depart">Depart from</string>
     <string name="arrival">Arrival At</string>
-    <string name="date_test">21-10-2001</string>
+    <string name="date_test">21–10–2001</string>
     <string name="search">Search and compare</string>
     <string name="vip">VIP</string>
     <string name="classic">Classic</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="ville1">Douala</string>
     <string name="ville2">Yaounde</string>
@@ -94,4 +94,14 @@
         <item>Bamenda</item>
         <item>Bafang</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="retry">Retry</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="please_verified">Please verified your</string>
+    <string name="internet_connection">internet connection</string>
+    <string name="close">Close</string>
 </resources>
