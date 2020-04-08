@@ -33,7 +33,7 @@
     <string name="signin_subtitle">please sign in to inter on our app</string>
     <string name="signin_title">Sign In</string>
     <string name="hint_email">username or email@gmail.com</string>
-    <string name="hint_password">password</string>
+    <string name="hint_password">Password</string>
     <string name="text_view_text1_cb_login">Remember me</string>
     <string name="forgot_password">Forgot password ?</string>
     <string name="have_acount">Don\'t have account ?</string>
@@ -41,7 +41,8 @@
     <string name="sign_up_title">Sign Up</string>
     <string name="sign_up_subtitle">Please sign up and access to better content</string>
     <string name="username">Username</string>
-    <string name="email">email@gmail.com</string>
+    <string name="Firstname">First name</string>
+    <string name="email">Email@gmail.com</string>
     <string name="phone">6*********</string>
     <string name="send_me_email">Send me email</string>
     <string name="terms_license">I accepts terms and license</string>
@@ -58,4 +59,23 @@
     <string name="yourphone">Your phone number</string>
     <string name="getstar">Get started !</string>
     <string name="sendme">Send me code</string>
+    <string name="user_name_profile"> Bakari Potter</string>
+    <string name="point1">2500 points</string>
+    <string name="point2">4000 points</string>
+    <string name="point3">11000 points</string>
+    <string name="username1_propfile">Username</string>
+    <string name="Email_propfile">Email</string>
+    <string name="Telephone">Telephone</string>
+    <string name="password_profile">Password</string>
+    <string name="save_profile">Save</string>
+    <string name="Notification">Notifications</string>
+    <string name="Wallets">Wallets</string>
+    <string name="Languages">Languages</string>
+    <string name="Coupons">Coupons</string>
+    <string name="Term">Terms $ Conditions</string>
+    <string name="Private">Privacy Police</string>
+    <string name="help">Help Center</string>
+    <string name="About">About us</string>
+    <string name="paiementstate_title">Add Coupon</string>
+    <string name="paiementstate_subtitle">please enter your data to process transaction</string>
 </resources>

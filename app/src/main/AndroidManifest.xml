@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vortex">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".loginAndRegister.Otp"></activity>
+        <activity android:name=".PaiementStates.PaiementState"></activity>
+        <activity android:name=".Setting" />
+        <activity android:name=".Profile" />
+        <activity android:name=".loginAndRegister.Otp" />
         <activity android:name=".loginAndRegister.test" />
         <activity android:name=".loginAndRegister.ResetPasswordThird" />
         <activity android:name=".loginAndRegister.ResetPasswordBoth" />
@@ -28,7 +33,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
