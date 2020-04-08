@@ -78,4 +78,6 @@
     <string name="About">About us</string>
     <string name="paiementstate_title">Add Coupon</string>
     <string name="paiementstate_subtitle">please enter your data to process transaction</string>
+    <string name="paiementstate1_subtitle">please choose your payment mode</string>
+    <string name="paiementstate_Next">Next</string>
 </resources>

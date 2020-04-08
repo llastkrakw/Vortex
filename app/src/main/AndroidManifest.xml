@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PaiementStates.PaiementState"></activity>
+        <activity android:name=".PaiementStates.PaiementState1"></activity>
+        <activity android:name=".PaiementStates.PaiementState" />
         <activity android:name=".Setting" />
         <activity android:name=".Profile" />
         <activity android:name=".loginAndRegister.Otp" />

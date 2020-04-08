@@ -291,8 +291,8 @@
         <Button
             android:id="@+id/btn_password_profile"
             style="@style/btn_password_profile"
-            android:layout_width="108dp"
-            android:layout_height="32dp"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="100dp"
@@ -308,8 +308,8 @@
         <Button
             android:id="@+id/btn_Save_profile"
             style="@style/btn_Save_profile"
-            android:layout_width="112dp"
-            android:layout_height="36dp"
+            android:layout_width="120dp"
+            android:layout_height="46dp"
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="100dp"
