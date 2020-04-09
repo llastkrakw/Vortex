@@ -147,4 +147,13 @@
         <item name="android:textColor">#fff</item>
         <item name="android:background">@drawable/back_ground_btn_sign_in_login</item>
     </style>
+    <style name="paiementstate_Pay">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/btn_pay_paiement_state</item>
+    </style>
 </resources>

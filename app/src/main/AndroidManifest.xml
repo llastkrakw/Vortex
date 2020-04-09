@@ -13,10 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PaiementStates.PaiementState1"></activity>
+        <activity android:name=".PaiementStates.PaiementState2"></activity>
+        <activity android:name=".PaiementStates.PaiementState1" />
         <activity android:name=".PaiementStates.PaiementState" />
-        <activity android:name=".Setting" />
-        <activity android:name=".Profile" />
+        <activity android:name=".ProfileAndSetting.Setting" />
+        <activity android:name=".ProfileAndSetting.Profile" />
         <activity android:name=".loginAndRegister.Otp" />
         <activity android:name=".loginAndRegister.test" />
         <activity android:name=".loginAndRegister.ResetPasswordThird" />

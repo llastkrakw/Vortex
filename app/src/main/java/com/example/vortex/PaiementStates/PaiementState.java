@@ -12,7 +12,6 @@ import android.widget.Spinner;
 import com.example.vortex.R;
 
 public class PaiementState extends AppCompatActivity {
-    Button next;
     private Spinner spinner_code_phone;
     private String[] table_spinner_code ={"+237", "+224", "+221", "+91", "+1","+331"};
     @Override
@@ -23,13 +22,5 @@ public class PaiementState extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, table_spinner_code);
         spinner_code_phone.setAdapter(arrayAdapter);
 
-        next = findViewById(R.id.btn_next_paiementstate);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i= new Intent(PaiementState.this,PaiementState1.class);
-                startActivity(i);
-            }
-        });
     }
 }

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blanc"
-        tools:context=".Profile">
+        tools:context=".ProfileAndSetting.Profile">
 
         <ImageView
             android:id="@+id/backspace_blanc"
@@ -35,11 +35,13 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profile_pic"
             android:layout_width="159dp"
             android:layout_height="137dp"
             android:layout_marginTop="16dp"
+            app:civ_shadow="true"
+            app:civ_border_width="1dp"
             android:foregroundGravity="center"
             android:src="@drawable/photo_profile"
             app:layout_constraintEnd_toEndOf="parent"

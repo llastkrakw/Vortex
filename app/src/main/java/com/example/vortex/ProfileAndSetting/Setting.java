@@ -1,4 +1,4 @@
-package com.example.vortex;
+package com.example.vortex.ProfileAndSetting;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import com.example.vortex.R;
 
 public class Setting extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 

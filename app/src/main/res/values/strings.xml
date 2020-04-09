@@ -35,6 +35,8 @@
     <string name="hint_email">username or email@gmail.com</string>
     <string name="hint_password">Password</string>
     <string name="text_view_text1_cb_login">Remember me</string>
+    <string name="cb_auto">Auto</string>
+    <string name="cb_validation">validation</string>
     <string name="forgot_password">Forgot password ?</string>
     <string name="have_acount">Don\'t have account ?</string>
     <string name="register_now">Register now.</string>
@@ -44,6 +46,7 @@
     <string name="Firstname">First name</string>
     <string name="email">Email@gmail.com</string>
     <string name="phone">6*********</string>
+    <string name="money">10 000</string>
     <string name="send_me_email">Send me email</string>
     <string name="terms_license">I accepts terms and license</string>
     <string name="reset_password_title1">Please enter your registered email to reset password</string>
@@ -77,7 +80,9 @@
     <string name="help">Help Center</string>
     <string name="About">About us</string>
     <string name="paiementstate_title">Add Coupon</string>
-    <string name="paiementstate_subtitle">please enter your data to process transaction</string>
-    <string name="paiementstate1_subtitle">please choose your payment mode</string>
+    <string name="paiementstate_subtitle">Please enter your data to process transaction</string>
+    <string name="paiementstate1_subtitle">Please choose your payment mode</string>
+    <string name="paiementstate2_subtitle">Please finalize your payment</string>
     <string name="paiementstate_Next">Next</string>
+    <string name="paiementstate_Pay">Pay</string>
 </resources>
