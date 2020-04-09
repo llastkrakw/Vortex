@@ -3,11 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    tools:context=".splah.VerifyConnection">
-
-    <!-- TODO: Update blank fragment layout -->
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Contour"
@@ -59,8 +56,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/failed"
-            tools:ignore="MissingConstraints"
-            android:contentDescription="@string/todo">
+            tools:ignore="MissingConstraints">
 
         </ImageView>
 
