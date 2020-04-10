@@ -85,4 +85,7 @@
     <string name="paiementstate2_subtitle">Please finalize your payment</string>
     <string name="paiementstate_Next">Next</string>
     <string name="paiementstate_Pay">Pay</string>
+    <string name="paiementstate3_title">Payment Status</string>
+    <string name="paiementstate3_subtitle">Successful !</string>
+    <string name="btn_ok_ps3">Ok</string>
 </resources>

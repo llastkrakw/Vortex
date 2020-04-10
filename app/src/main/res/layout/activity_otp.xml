@@ -21,7 +21,7 @@
             android:fontFamily="@font/poppins_extrabold"
             android:gravity="center"
             android:inputType="number"
-            android:itemBackground="@color/colorPrimaryDark"
+            android:itemBackground="@drawable/back_ground_spinner"
             android:textColor="@android:color/white"
             app:itemCount="4"
             app:itemHeight="60dp"
@@ -30,7 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/phoneverif"
             app:lineColor="@color/colorPrimaryDark"
-            app:viewType="line" />
+            />
 
         <ImageView
             android:id="@+id/imageView4"
