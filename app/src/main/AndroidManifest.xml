@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PaiementStates.PaiementState3"/>
-        <activity android:name=".PaiementStates.PaiementState2" />
-        <activity android:name=".PaiementStates.PaiementState1" />
+        <activity android:name=".Popup.Popup2"></activity>
+        <activity android:name=".PaiementStates.PaiementStatePaypalOrBitcoin" />
+        <activity android:name=".Popup.Popup1" />
+        <activity android:name=".PaiementStates.PaiementStateOrangeOrMtn" />
+        <activity android:name=".PaiementStates.PaiementStateMode" />
         <activity android:name=".PaiementStates.PaiementState" />
         <activity android:name=".ProfileAndSetting.Setting" />
         <activity android:name=".ProfileAndSetting.Profile" />

@@ -4,15 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardElevation="20sp"
-    android:layout_width="250dp"
+    android:layout_width="230dp"
     android:layout_gravity="center"
     android:layout_height="wrap_content"
-    tools:context=".PaiementStates.PaiementState3">
+    tools:context=".Popup.Popup1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:background="@drawable/paiement_state3_bg">
+        android:background="@drawable/bg_popup1">
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
     <Button
-        android:id="@+id/btn_ps3"
+        android:id="@+id/btn_pop1"
         style="@style/btn_Ok_ps3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

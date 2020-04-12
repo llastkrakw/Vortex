@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.vortex.R;
 
-public class PaiementState1 extends AppCompatActivity {
+public class PaiementStateMode extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_paiement_state1);
+        setContentView(R.layout.activity_paiement_state_mode);
     }
 }

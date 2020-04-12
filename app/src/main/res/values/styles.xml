@@ -155,7 +155,7 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">#fff</item>
         <item name="android:background">@drawable/btn_pay_paiement_state</item>
-    </style>s
+    </style>
 
 
     <style name="paiementstate3_title">
@@ -164,6 +164,28 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
     </style>
+
+    <style name="popup2_title">
+        <item name="android:textColor">#3D3D3D</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="popup2_subtitle">
+        <item name="android:textColor">#AA55FF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="popup2_subsubtitle">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
     <style name="paiementstate3_subtitle">
         <item name="android:textColor">@color/blanc</item>
         <item name="android:textSize">16sp</item>

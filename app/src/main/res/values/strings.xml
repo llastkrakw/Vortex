@@ -88,4 +88,7 @@
     <string name="paiementstate3_title">Payment Status</string>
     <string name="paiementstate3_subtitle">Successful !</string>
     <string name="btn_ok_ps3">Ok</string>
+    <string name="popup2_title">Congratulation !</string>
+    <string name="popup2_subtitle">You win +200 exp</string>
+    <string name="popup2_subsubtitle">Win exp and have a reduction for your next trip</string>
 </resources>
