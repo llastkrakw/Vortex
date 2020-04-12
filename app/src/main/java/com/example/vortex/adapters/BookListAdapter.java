@@ -2,11 +2,13 @@ package com.example.vortex.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.vortex.R;
 import com.example.vortex.fakeForUi.TravelFake;
 import com.example.vortex.fakeForUi.TravelListFake;
+import com.example.vortex.main.TicketActivity;
 
 import java.util.List;
 import java.util.Locale;
@@ -25,6 +28,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
     private Context context;
     private List<TravelListFake> ListItem;
     private View view;
+    private int counter = 0;
 
     public BookListAdapter(List<TravelListFake> listItem, Context context) {
         ListItem = listItem;
@@ -66,6 +70,9 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         holder.date.setText(item.getTravelDate());
         holder.price.setText(String.format("%s for %s", item.getClasse(), item.getPrice()));
 
+        holder.id = counter;
+        counter++;
+
     }
 
     @Override
@@ -73,7 +80,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         return ListItem.size();
     }
 
-    public class ViewHolder  extends RecyclerView.ViewHolder{
+    public class ViewHolder  extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView agence_name;
         private TextView number_items;
@@ -89,6 +96,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         private ImageView agence_img;
         private ImageView rating;
         private ImageView like;
+        private int id;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -107,6 +115,22 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
             agence_img = (ImageView) itemView.findViewById(R.id.img_agence);
             rating = (ImageView) itemView.findViewById(R.id.rating);
             like = (ImageView) itemView.findViewById(R.id.like);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            TravelListFake item = ListItem.get(id);
+            Intent ticket = new Intent(context, TicketActivity.class);
+            ticket.putExtra("image_agence", item.getImage());
+            ticket.putExtra("name_agence", agence_name.getText());
+            ticket.putExtra("depart", ville1.getText());
+            ticket.putExtra("arrive", ville2.getText());
+            ticket.putExtra("boarding", hr_depart.getText());
+            ticket.putExtra("date", date.getText());
+            ticket.putExtra("classe", item.getClasse());
+            context.startActivity(ticket);
         }
     }
 }

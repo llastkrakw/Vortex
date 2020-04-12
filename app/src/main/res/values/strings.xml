@@ -87,6 +87,21 @@
     <string name="hr2">12h00</string>
     <string name="price">Vip for 5000 fcfa</string>
     <string name="map_token">pk.eyJ1IjoibGxhc3RrcmFrdyIsImEiOiJjazhuZngxdmIwcHJyM3JwOGk0c2RwaWMyIn0.yJcRNt8l2Y61YdXfBVCC4g</string>
+    <string name="ticket_title">Buy your ticket</string>
+    <string name="buy">Buy</string>
+    <string name="ticket_code_title">Your ticket code</string>
+    <string name="ticket_code">14ND DF45 FRE4 ZF54</string>
+    <string name="agence_name_title">Agence</string>
+    <string name="passenger_name_title">Passenger</string>
+    <string name="passenger_name">Bakari Potter</string>
+    <string name="date_title">Date</string>
+    <string name="travel_id_title">Travel ID</string>
+    <string name="travel_id">Y-128</string>
+    <string name="boarding_title">Boarding time</string>
+    <string name="seat_title">Seat</string>
+    <string name="seat">5A</string>
+    <string name="class_title">Class</string>
+    <string name="add_passenger">+1</string>
     <string-array name="query_suggestions">
         <item>Douala</item>
         <item>Yaounde</item>
