@@ -157,10 +157,6 @@
         <item name="android:background">@drawable/btn_pay_paiement_state</item>
     </style>s
 
-    <style name="paeimentstate3_popup">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowCloseOnTouchOutside">false</item>
-    </style>
 
     <style name="paiementstate3_title">
         <item name="android:textColor">@color/blanc</item>

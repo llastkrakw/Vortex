@@ -2,7 +2,10 @@ package com.example.vortex.PaiementStates;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +22,17 @@ Button btn_pay;
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(PaiementState2.this,PaiementState3.class);
-                startActivity(i);
+                final Dialog dialog = new Dialog(PaiementState2.this);
+                dialog.setContentView(R.layout.activity_paiement_state3);
+                Button ok = dialog.findViewById(R.id.btn_ps3);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
     }

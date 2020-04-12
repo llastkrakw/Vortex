@@ -13,9 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PaiementStates.PaiementState3"
-            android:theme="@style/paeimentstate3_popup">
-        </activity>
+        <activity android:name=".PaiementStates.PaiementState3"/>
         <activity android:name=".PaiementStates.PaiementState2" />
         <activity android:name=".PaiementStates.PaiementState1" />
         <activity android:name=".PaiementStates.PaiementState" />
