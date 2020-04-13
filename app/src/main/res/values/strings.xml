@@ -104,5 +104,6 @@
     <string name="popup4_title">Connection Failed !</string>
     <string name="popup4_close">Close</string>
     <string name="popup4_retry">Retry</string>
+    <string name="popup5_title">Add passenger</string>
     <string name="popup4_subtitle">Please verified your internet connection</string>
 </resources>
