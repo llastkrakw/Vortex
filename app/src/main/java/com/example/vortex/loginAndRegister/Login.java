@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.vortex.PaiementStates.PaiementState;
+import com.example.vortex.PaiementStates.PaiementStateMode;
 import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
 import com.example.vortex.PaiementStates.PaiementStatePaypalOrBitcoin;
 import com.example.vortex.R;
@@ -46,7 +48,7 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Login.this, PaiementStatePaypalOrBitcoin.class);
+                Intent i = new Intent(Login.this, PaiementStateOrangeOrMtn.class);
                 startActivity(i);
             }
         });

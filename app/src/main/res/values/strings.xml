@@ -91,4 +91,14 @@
     <string name="popup2_title">Congratulation !</string>
     <string name="popup2_subtitle">You win +200 exp</string>
     <string name="popup2_subsubtitle">Win exp and have a reduction for your next trip</string>
+    <string name="popup3_title1">Filter</string>
+    <string name="popup3_title2">Price</string>
+    <string name="popup3_title3">Type</string>
+    <string name="popup3_subtitle1">Add filter conditions</string>
+    <string name="popup3_subtitle2">Min</string>
+    <string name="popup3_subtitle3">Max</string>
+    <string name="popup3_subsubtitle1">Normal</string>
+    <string name="popup3_subsubtitle2">Vip</string>
+    <string name="price1">2 000</string>
+    <string name="price2">5 000</string>
 </resources>
