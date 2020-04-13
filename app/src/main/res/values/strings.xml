@@ -101,4 +101,8 @@
     <string name="popup3_subsubtitle2">Vip</string>
     <string name="price1">2 000</string>
     <string name="price2">5 000</string>
+    <string name="popup4_title">Connection Failed !</string>
+    <string name="popup4_close">Close</string>
+    <string name="popup4_retry">Retry</string>
+    <string name="popup4_subtitle">Please verified your internet connection</string>
 </resources>
