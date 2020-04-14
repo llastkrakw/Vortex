@@ -1,9 +1,7 @@
 package com.example.vortex.loginAndRegister;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -13,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,21 +24,11 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthProvider;
-import com.hbb20.CountryCodePicker;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.mukesh.OnOtpCompletionListener;
 import com.mukesh.OtpView;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -49,148 +36,135 @@ import retrofit2.Response;
 
 public class Otp extends AppCompatActivity {
 
-    private CountryCodePicker ccp;
-    private EditText phoneText;
-    private EditText codeText;
-    private Button continueAndNextBtn;
-    private String checker ="",phoneNumber ="";
-    private RelativeLayout relativeLayout;
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-    private FirebaseAuth mAuth;
-    private String mVerificationid;
-    private PhoneAuthProvider.ForceResendingToken mResendToken;
-    private ProgressDialog loadingBar;
+    private CircularImageView userprofile;
+    private TextView username;
+    private Button started;
+    private OtpView otpview;
+    private EditText user_number;
+    private Button buttonCode;
+    private String  API_KEY = "a1094647-6b4a-11ea-9fa5-0200cd936042";
+    private String sessionId;
 
-
+    String OTP = "";
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-        mAuth=FirebaseAuth.getInstance();
-        loadingBar=new ProgressDialog(this);
 
 
-        phoneText=findViewById(R.id.phoneText);
-        codeText=findViewById(R.id.codeText);
-        continueAndNextBtn=findViewById(R.id.continueNextButton);
-        relativeLayout=findViewById(R.id.phoneAuth);
+        userprofile = (CircularImageView) findViewById(R.id.profileVerif);
+        username = (TextView) findViewById(R.id.usernameVerif);
+        otpview = (OtpView) findViewById(R.id.otp_view);
+        user_number = (EditText) findViewById(R.id.phoneverif);
+        buttonCode = (Button) findViewById(R.id.buttonCode);
 
-        ccp=(CountryCodePicker) findViewById(R.id.ccp);
-        ccp.registerCarrierNumberEditText(phoneText);
+        //otpview.setItemRadius(10);
 
-        continueAndNextBtn.setOnClickListener(new View.OnClickListener() {
+        //
+        // Set Color
+        userprofile.setCircleColor(Color.WHITE);
+        // or with gradient
+        userprofile.setCircleColorStart(Color.BLACK);
+        userprofile.setCircleColorEnd(Color.RED);
+        userprofile.setCircleColorDirection(CircularImageView.GradientDirection.TOP_TO_BOTTOM);
+
+        // Set Border
+        userprofile.setBorderWidth(10f);
+        userprofile.setBorderColor(Color.BLACK);
+        // or with gradient
+        userprofile.setBorderColorStart(Color.BLACK);
+        userprofile.setBorderColorEnd(Color.RED);
+        userprofile.setBorderColorDirection(CircularImageView.GradientDirection.TOP_TO_BOTTOM);
+
+        // Add Shadow with default param
+        userprofile.setShadowEnable(true);
+        // or with custom param
+        userprofile.setShadowRadius(10f);
+        userprofile.setShadowColor(Color.RED);
+        userprofile.setShadowGravity(CircularImageView.ShadowGravity.CENTER);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+
+            username.setText(personName);
+            Glide.with(this).load(String.valueOf(personPhoto)).into(userprofile);
+        }
+
+        for(int i=0; i<4; i++){
+            OTP += random.nextInt(9);
+        }
+
+        buttonCode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                if (continueAndNextBtn.getText().equals("Submit") || checker.equals("Code sent"))
-                {
-                    String verificationCode=codeText.getText().toString();
-                    if(verificationCode.equals(""))
-                    {
-                        Toast.makeText(Otp.this, "Please writte verification code first.", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+/*                ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+                Call<MessageResponse> call = apiService.sentOTP(API_KEY, user_number.getText().toString(), OTP);
+                call.enqueue(new Callback<MessageResponse>() {
+                    @Override
+                    public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
+                        sessionId = response.body().getDetails();
+                        Toast.makeText(Otp.this, "See your message", Toast.LENGTH_LONG).show();
+                        Log.d("SenderID", sessionId);
+                        //you may add code to automatically fetch OTP from messages.
                     }
-                    else
-                    {
-                        loadingBar.setTitle("Code Verification");
-                        loadingBar.setMessage("Please wait, while we are verifying your Code.");
-                        loadingBar.setCanceledOnTouchOutside(false);
-                        loadingBar.show();
-                        PhoneAuthCredential credential=PhoneAuthProvider.getCredential(mVerificationid, verificationCode);
-                        signInWithPhoneAuthCredential(credential);
+
+                    @Override
+                    public void onFailure(Call<MessageResponse> call, Throwable t) {
+                        Log.e("ERROR", t.toString());
                     }
-                }
-                else
-                {
-                    phoneNumber=ccp.getFullNumberWithPlus();
-                    if(!phoneNumber.equals(""))
-                    {
-                        loadingBar.setTitle("Phone Number Verification");
-                        loadingBar.setMessage("Please wait, while we are verifying your phone number.");
-                        loadingBar.setCanceledOnTouchOutside(false);
-                        loadingBar.show();
-                        PhoneAuthProvider.getInstance().verifyPhoneNumber(phoneNumber,60, TimeUnit.SECONDS,Otp.this,mCallbacks);
-                    }
-                    else
-                    {
-                        Toast.makeText(Otp.this, "Please write valid phone number.", Toast.LENGTH_SHORT).show();
-                    }
-                }
+
+                });*/
+
+
+              Intent main = new Intent(Otp.this, MainActivity.class);
+              startActivity(main);
+
             }
         });
-        mCallbacks=new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+
+        //otp vefif
+/*
+        otpview.setOtpCompletionListener(new OnOtpCompletionListener() {
             @Override
-            public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential)
-            {
-                signInWithPhoneAuthCredential(phoneAuthCredential);
-            }
+            public void onOtpCompleted(String otp) {
+                ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
+                Call<MessageResponse> call = apiService.verifyOTP(API_KEY, sessionId, otp);
 
-            @Override
-            public void onVerificationFailed(FirebaseException e)
-            {
-                Toast.makeText(Otp.this, "Invalid Phone Number.....", Toast.LENGTH_SHORT).show();
-                loadingBar.dismiss();
-                relativeLayout.setVisibility(View.VISIBLE);
-                continueAndNextBtn.setText("Continue");
-                codeText.setVisibility(View.GONE);
-            }
+                call.enqueue(new Callback<MessageResponse>() {
 
-            @Override
-            public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-                super.onCodeSent(s, forceResendingToken);
-
-                mVerificationid=s;
-                mResendToken=forceResendingToken;
-
-                relativeLayout.setVisibility(View.GONE);
-                checker = "Code Sent";
-                continueAndNextBtn.setText("Submit");
-                codeText.setVisibility(View.VISIBLE);
-                loadingBar.dismiss();
-                Toast.makeText(Otp.this, "Code has been sent, please check.", Toast.LENGTH_SHORT).show();
-            }
-        };
-    }
-
-    @Override
-    protected void onStart()
-    {
-        super.onStart();
-
-        FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
-        if(firebaseUser!=null)
-        {
-            Intent homeIntent=new Intent(Otp.this, MainActivity.class);
-            startActivity(homeIntent);
-            finish();
-        }
-    }
-
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful())
-                        {
-                            loadingBar.dismiss();
-                            Toast.makeText(Otp.this, "Congratulations, you are logged in successfully.", Toast.LENGTH_SHORT).show();
-                            sendUserToMainActivity();
-                        }
-                        else
-                        {
-                            loadingBar.dismiss();
-                            String e = task.getException().toString();
-                            Toast.makeText(Otp.this, "Erro" + e, Toast.LENGTH_SHORT).show();
+                    public void onResponse(Call<MessageResponse> call, Response<MessageResponse> response) {
 
+                        try {
+                            if(response.body().getStatus().equals("Success")){
+                                Toast.makeText(Otp.this, "Success", Toast.LENGTH_LONG).show();
+                                Intent i=new Intent(Otp.this,test.class);
+                                startActivity(i);
+                            }else{
+                                Toast.makeText(Otp.this, "Failed", Toast.LENGTH_LONG).show();
+                                Log.d("Failure", response.body().getDetails()+"|||"+response.body().getStatus());
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
                     }
+
+                    @Override
+                    public void onFailure(Call<MessageResponse> call, Throwable t) {
+                        Log.e("ERROR", t.toString());
+                    }
+
                 });
-    }
-    private void sendUserToMainActivity()
-    {
-        Intent intent=new Intent(Otp.this, MainActivity.class);
-        startActivity(intent);
-        finish();
+            }
+        });
+*/
+
     }
 }

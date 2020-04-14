@@ -53,15 +53,6 @@ dependencies {
     implementation 'me.dm7.barcodescanner:zxing:1.8.4'
     implementation 'com.google.zxing:core:3.2.1'
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
-    implementation 'com.google.firebase:firebase-core:11.8.0'
-    implementation 'com.google.firebase:firebase-database:11.0.2'
-    implementation 'com.google.firebase:firebase-storage:11.8.0'
-    implementation 'com.google.firebase:firebase-auth:11.8.0'
-    implementation 'com.firebaseui:firebase-ui-database:3.2.2'
-    implementation 'com.hbb20:ccp:2.1.9'
-    implementation 'pub.devrel:easypermissions:0.4.0'
-    implementation 'com.google.android.material:material:1.1.0'
 
 
 }
-apply plugin: 'com.google.gms.google-services'
