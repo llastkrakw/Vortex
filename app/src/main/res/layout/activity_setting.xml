@@ -124,8 +124,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_terms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_term_condition"
             tools:ignore="MissingConstraints"
@@ -157,8 +157,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_aboutus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_about_us"
             tools:ignore="MissingConstraints"
@@ -191,8 +191,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_privacy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_private_policy"
             tools:ignore="MissingConstraints"
@@ -225,8 +225,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_helpcenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_help"
             tools:ignore="MissingConstraints"
@@ -260,8 +260,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_coupon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_coupons"
             tools:ignore="MissingConstraints"
@@ -293,8 +293,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_language"
             tools:ignore="MissingConstraints"
@@ -327,8 +327,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_wallets"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
 
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_wallets"
@@ -361,8 +361,8 @@
 
         <ImageView
             android:id="@+id/iv_setting_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_marginRight="25dp"
             android:src="@drawable/icon_notification"
             tools:ignore="MissingConstraints"
