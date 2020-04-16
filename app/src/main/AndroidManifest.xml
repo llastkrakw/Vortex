@@ -13,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Popup.Popup5"></activity>
+        <activity android:name=".Popup7"></activity>
+        <activity android:name=".Popup.Popup6" />
+        <activity android:name=".Popup.Popup5" />
         <activity android:name=".Popup.Popup4" />
         <activity android:name=".Popup.Popup3" />
         <activity android:name=".Popup.Popup2" />
-        <activity android:name=".PaiementStates.PaiementStatePaypalOrBitcoin" />
         <activity android:name=".Popup.Popup1" />
         <activity android:name=".PaiementStates.PaiementStateOrangeOrMtn" />
         <activity android:name=".PaiementStates.PaiementStateMode" />

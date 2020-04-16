@@ -125,7 +125,7 @@
     <style name="spinner2">
         <item name="android:background">@drawable/back_ground_spinner</item>
         <item name="android:textColor">@color/blanc</item>
-        <item name="android:textSize">5sp</item>
+        <item name="android:textSize">8sp</item>
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">38dp</item>
         <item name="android:colorPrimary" tools:targetApi="lollipop">@color/blanc</item>

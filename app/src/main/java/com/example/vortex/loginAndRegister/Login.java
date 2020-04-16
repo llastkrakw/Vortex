@@ -8,10 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.vortex.PaiementStates.PaiementState;
-import com.example.vortex.PaiementStates.PaiementStateMode;
 import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
-import com.example.vortex.PaiementStates.PaiementStatePaypalOrBitcoin;
 import com.example.vortex.R;
 
 public class Login extends AppCompatActivity {

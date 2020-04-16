@@ -27,8 +27,8 @@ Button btn_pay;
                 ok.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        dialog.setContentView(R.layout.activity_popup5);
-                        Button ok2 = dialog.findViewById(R.id.btn_ok_popup5);
+                        dialog.setContentView(R.layout.activity_popup7);
+                        Button ok2 = dialog.findViewById(R.id.btn_ok_popup7);
                         ok2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
