@@ -24,12 +24,11 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login = findViewById(R.id.btnLogin);
-        btn_sign_in_login = (Button) findViewById(R.id.buttonLogin);
+        login = findViewById(R.id.buttonLogin);
         register = (TextView) findViewById(R.id.login_register);
         forgot = (TextView) findViewById(R.id.login_forgot);
 
-        btn_sign_in_login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent main = new Intent(Login.this, MainActivity.class);
@@ -53,13 +52,6 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Login.this, PaiementStateOrangeOrMtn.class);
-                startActivity(i);
-            }
-        });
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS );
 
     }

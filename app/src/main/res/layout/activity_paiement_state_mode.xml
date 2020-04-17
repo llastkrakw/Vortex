@@ -8,16 +8,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="349dp"
-            android:layout_height="117dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/bulle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="349dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/test"
+        android:src="@drawable/bulle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@drawable/logo"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/test"/>
 
         <ImageView
             android:id="@+id/imageView9"
@@ -27,7 +38,8 @@
             android:src="@drawable/barre_horizontale2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:contentDescription="@string/test"/>
 
         <TextView
             android:id="@+id/paiement_title"
@@ -53,91 +65,67 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/paiement_title" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/back_row"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView5"
-            app:layout_constraintVertical_bias="0.494"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/paiement_title"
+            android:contentDescription="@string/test"/>
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/orange"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="22dp"
+        android:contentDescription="@string/test"
         android:src="@drawable/orange_money"
-        app:layout_constraintEnd_toStartOf="@+id/imageView13"
-        app:layout_constraintHorizontal_bias="0.342"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paiement_subtitle"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/paiement_subtitle" />
 
     <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="120dp"
+        android:id="@+id/mtn"
+        android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginTop="68dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="52dp"
         android:src="@drawable/mtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/paiement_subtitle"
-        tools:ignore="MissingConstraints" />
+        android:contentDescription="@string/test"
+        android:alpha="0.4"/>
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/paypal"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="22dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView19"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="40dp"
+        android:alpha="0.4"
+        android:contentDescription="@string/test"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:srcCompat="@drawable/paypal1" />
+        app:layout_constraintTop_toBottomOf="@+id/orange"
+        app:srcCompat="@drawable/paypal" />
 
     <ImageView
-        android:id="@+id/imageView19"
+        android:id="@+id/bitcoin"
         android:layout_width="120dp"
         android:layout_height="60dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="42dp"
+        android:alpha="0.4"
+        android:contentDescription="@string/test"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/mtn"
         app:srcCompat="@drawable/bitcoin" />
 
     <Button
         android:id="@+id/btn_next_paiementstate_1"
         style="@style/paiementstate_Next"
         android:layout_width="120dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:padding="15dp"
         android:text="@string/paiementstate_Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:layout_constraintVertical_bias="0.417" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="66dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

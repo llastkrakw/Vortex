@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Popup7"></activity>
+        <activity android:name=".Popup.Popup7"></activity>
         <activity android:name=".Popup.Popup6" />
         <activity android:name=".Popup.Popup5" />
         <activity android:name=".Popup.Popup4" />

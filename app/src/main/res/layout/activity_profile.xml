@@ -7,7 +7,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/blanc"
         tools:context=".ProfileAndSetting.Profile">
 
@@ -20,7 +20,8 @@
             android:src="@drawable/backspace_black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
 
         <ImageView
             android:id="@+id/logoblanc"
@@ -33,33 +34,39 @@
             app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toEndOf="@id/backspace_blanc"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
+
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/profile_pic"
-            android:layout_width="159dp"
-            android:layout_height="137dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="142dp"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
             app:civ_shadow="true"
-            app:civ_border_width="1dp"
-            android:foregroundGravity="center"
-            android:src="@drawable/photo_profile"
+            tools:srcCompat="@tools:sample/avatars"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/logoblanc" />
+            app:layout_constraintTop_toTopOf="@id/logoblanc"
+            app:civ_shadow_color="#3f51b5"/>
 
         <ImageView
             android:id="@+id/add_profile_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add_profile_pic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/test"
+            android:src="@drawable/image_icon"
             app:layout_constraintBottom_toBottomOf="@id/profile_pic"
             app:layout_constraintEnd_toEndOf="@id/profile_pic"
             app:layout_constraintHorizontal_bias="0.843"
             app:layout_constraintStart_toStartOf="@id/profile_pic"
             app:layout_constraintTop_toTopOf="@id/profile_pic"
-            app:layout_constraintVertical_bias="0.848"
+            app:layout_constraintVertical_bias="0.9"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -101,7 +108,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5sp"
+                android:layout_marginStart="5sp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="experience"
                 android:textColor="#fff"
@@ -121,7 +128,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/linearLayout2"
             app:layout_constraintVertical_bias="0.009"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
 
         <ImageView
             android:id="@+id/point1_profile"
@@ -132,7 +140,8 @@
             android:src="@drawable/point1_profile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/divider"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
 
         <TextView
             android:id="@+id/point1"
@@ -150,9 +159,10 @@
             android:id="@+id/point2_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/test"
             android:src="@drawable/point2_profile"
+            app:layout_constraintEnd_toStartOf="@+id/point3_profile"
             app:layout_constraintStart_toEndOf="@id/point1_profile"
             app:layout_constraintTop_toTopOf="@id/divider"
             tools:ignore="MissingConstraints" />
@@ -175,12 +185,11 @@
             android:id="@+id/point3_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:contentDescription="@string/test"
             android:src="@drawable/point3_propfile"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/point2_profile"
             app:layout_constraintTop_toTopOf="@id/divider"
             tools:ignore="MissingConstraints" />
 
@@ -212,13 +221,12 @@
         <EditText
             android:id="@+id/edit_view_username_profile"
             style="@style/textview"
-            android:layout_width="280dp"
+            android:layout_width="320dp"
             android:layout_height="39dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:gravity="left"
             android:hint="Bakari Potter"
             android:textColorHint="#787474"
             app:layout_constraintEnd_toEndOf="parent"
@@ -243,13 +251,12 @@
         <EditText
             android:id="@+id/edit_view_Email_profile"
             style="@style/textview"
-            android:layout_width="278dp"
+            android:layout_width="320dp"
             android:layout_height="39dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:gravity="left"
             android:hint="llastkrakw21@gmail.com"
             android:textColorHint="#787474"
             app:layout_constraintEnd_toEndOf="parent"
@@ -274,13 +281,12 @@
         <EditText
             android:id="@+id/edit_view_telephone_profile"
             style="@style/textview"
-            android:layout_width="280dp"
+            android:layout_width="320dp"
             android:layout_height="40dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:gravity="left"
             android:hint="+237 691200485"
             android:inputType="phone"
             android:textColorHint="#787474"
@@ -294,15 +300,13 @@
             android:id="@+id/btn_password_profile"
             style="@style/btn_password_profile"
             android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="100dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
             android:elevation="25dp"
             android:text="@string/password_profile"
+            android:textSize="16sp"
             android:translationZ="10dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.643"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edit_view_telephone_profile"
             tools:ignore="MissingConstraints" />
@@ -312,16 +316,14 @@
             style="@style/btn_Save_profile"
             android:layout_width="120dp"
             android:layout_height="46dp"
-            android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="100dp"
             android:layout_marginBottom="24dp"
             android:elevation="25dp"
             android:text="@string/save_profile"
             android:translationZ="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.67"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_password_profile"
             tools:ignore="MissingConstraints" />

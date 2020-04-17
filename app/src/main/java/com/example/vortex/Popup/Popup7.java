@@ -1,8 +1,10 @@
-package com.example.vortex;
+package com.example.vortex.Popup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.vortex.R;
 
 public class Popup7 extends AppCompatActivity {
 

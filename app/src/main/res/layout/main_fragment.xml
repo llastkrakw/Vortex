@@ -280,7 +280,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/search"
+        android:id="@+id/pay"
         style="@style/button2"
         android:layout_width="250dp"
         android:layout_height="50dp"
