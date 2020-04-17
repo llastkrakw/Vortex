@@ -108,4 +108,55 @@
     <string name="popup6_title">Rate your travel</string>
     <string name="popup7_title">Choose your seat</string>
     <string name="popup4_subtitle">Please verified your internet connection</string>
+    <string name="plan_your_tripe">Plan your tripe</string>
+    <string name="forth">Forth</string>
+    <string name="forth2">Forth and back</string>
+    <string name="history">Travel history</string>
+    <string name="depart">Depart from</string>
+    <string name="arrival">Arrival At</string>
+    <string name="date_test">21-10-2001</string>
+    <string name="search">Search and compare</string>
+    <string name="vip">VIP</string>
+    <string name="classic">Classic</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="ville1">Douala</string>
+    <string name="ville2">Yaounde</string>
+    <string name="from">from</string>
+    <string name="time">/ 5h</string>
+    <string name="book">Book your tripe</string>
+    <string name="search_hint">Search to compare</string>
+    <string name="dla">DLA</string>
+    <string name="yde">YDE</string>
+    <string name="tiret">-</string>
+    <string name="match">Match list</string>
+    <string name="agence_name">Finex Voyage</string>
+    <string name="number_item">+3 more</string>
+    <string name="time2">5H</string>
+    <string name="hr1">8:00</string>
+    <string name="hr2">12h00</string>
+    <string name="price">Vip for 5000 fcfa</string>
+    <string name="map_token">pk.eyJ1IjoibGxhc3RrcmFrdyIsImEiOiJjazhuZngxdmIwcHJyM3JwOGk0c2RwaWMyIn0.yJcRNt8l2Y61YdXfBVCC4g</string>
+    <string name="ticket_title">Buy your ticket</string>
+    <string name="buy">Buy</string>
+    <string name="ticket_code_title">Your ticket code</string>
+    <string name="ticket_code">14ND DF45 FRE4 ZF54</string>
+    <string name="agence_name_title">Agence</string>
+    <string name="passenger_name_title">Passenger</string>
+    <string name="passenger_name">Bakari Potter</string>
+    <string name="date_title">Date</string>
+    <string name="travel_id_title">Travel ID</string>
+    <string name="travel_id">Y-128</string>
+    <string name="boarding_title">Boarding time</string>
+    <string name="seat_title">Seat</string>
+    <string name="seat">5A</string>
+    <string name="class_title">Class</string>
+    <string name="add_passenger">+1</string>
+    <string-array name="query_suggestions">
+        <item>Douala</item>
+        <item>Yaounde</item>
+        <item>Kousserie</item>
+        <item>Bamenda</item>
+        <item>Bafang</item>
+    </string-array>
 </resources>

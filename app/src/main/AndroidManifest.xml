@@ -25,6 +25,9 @@
         <activity android:name=".PaiementStates.PaiementState" />
         <activity android:name=".ProfileAndSetting.Setting" />
         <activity android:name=".ProfileAndSetting.Profile" />
+        <activity android:name=".main.TicketActivity"></activity>
+        <activity android:name=".main.BookActivity" />
+        <activity android:name=".main.MainActivity" />
         <activity android:name=".loginAndRegister.Otp" />
         <activity android:name=".loginAndRegister.test" />
         <activity android:name=".loginAndRegister.ResetPasswordThird" />
@@ -42,5 +45,9 @@
             </intent-filter>
         </activity>
     </application>
+  
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
