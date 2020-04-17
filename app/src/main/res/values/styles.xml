@@ -279,36 +279,8 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">#3D3D3D</item>
-<!--    <style name="MaterialSearchViewStyle">
-        &lt;!&ndash; Background for the search bar &ndash;&gt;
-        <item name="searchBackground">@color/blanc</item>
-
-        &lt;!&ndash; Change voice icon &ndash;&gt;
-        <item name="searchVoiceIcon">@drawable/ic_action_voice_search_inverted</item>
-
-        &lt;!&ndash; Change clear text icon &ndash;&gt;
-        <item name="searchCloseIcon">@drawable/ic_action_navigation_close_inverted</item>
-
-        &lt;!&ndash; Change up icon &ndash;&gt;
-        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back_inverted</item>
-
-        &lt;!&ndash; Change icon for the suggestions &ndash;&gt;
-        <item name="searchSuggestionIcon">@drawable/ic_suggestion</item>
-
-        &lt;!&ndash; Change background for the suggestions list view &ndash;&gt;
-        <item name="searchSuggestionBackground">@android:color/white</item>
-
-        &lt;!&ndash; Change text color for edit text. This will also be the color of the cursor &ndash;&gt;
-        <item name="android:textColor">@color/noir</item>
-
-        &lt;!&ndash; Change hint text color for edit text &ndash;&gt;
-        <item name="android:textColorHint">@color/colorPrimary</item>
-
-        &lt;!&ndash; Hint for edit text &ndash;&gt;
-        <item name="android:hint">@string/search_hint</item>
-    </style>-->
-
-    <style name="SearchView">
+    </style>
+o(    <style name="SearchView">
         <item name="floatingSearch_backgroundColor">@color/blanc</item>
         <item name="floatingSearch_viewSearchInputTextColor">@color/noir</item>
         <item name="floatingSearch_viewSuggestionItemTextColor">@color/colorPrimary</item>
