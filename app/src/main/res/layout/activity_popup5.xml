@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="20sp"
+    android:layout_width="230dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    tools:context=".Popup.Popup1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_popup2"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/popup5_title"
+            style="@style/popup5_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/popup5_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/register_username"
+            style="@style/edit_text"
+            android:layout_width="199dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints="@string/test"
+            android:drawableStart="@drawable/icon_email"
+            android:hint="@string/Firstname"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup5_title"
+            tools:ignore="LabelFor" />
+
+        <LinearLayout
+            android:id="@+id/register_linear1"
+            android:layout_width="199dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_username">
+
+            <Spinner
+                android:id="@+id/popup5_spinner"
+                style="@style/spinner2"
+                android:layout_marginEnd="5dp" />
+
+            <EditText
+                android:id="@+id/register_phone"
+                style="@style/edit_text"
+                android:layout_width="143dp"
+                android:layout_height="match_parent"
+                android:autofillHints="@string/test"
+                android:drawableStart="@drawable/icon_phone"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/popup5_Or"
+            style="@style/popup2_subsubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_linear1" />
+
+        <CheckBox
+            android:id="@+id/popup5_cb"
+            style="@style/chcek_box_indicator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:checked="true"
+            android:text="Is children"
+            android:textColor="#3D3D3D"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="447dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup5_Or" />
+
+        <Button
+            android:id="@+id/btn_ok_popup5"
+            style="@style/btn_Ok_ps3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/btn_ok_ps3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup5_cb" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
