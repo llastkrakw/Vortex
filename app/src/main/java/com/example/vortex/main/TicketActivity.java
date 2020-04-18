@@ -2,13 +2,19 @@ package com.example.vortex.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vortex.PaiementStates.PaiementState;
+import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
 import com.example.vortex.R;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
@@ -32,6 +38,9 @@ public class TicketActivity extends AppCompatActivity {
     private TextView classe;
     private TextView seat;
     private TextView number;
+    private Button pay;
+    private ImageView add_passenger;
+    private ImageView change_place;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +59,9 @@ public class TicketActivity extends AppCompatActivity {
         classe = (TextView) findViewById(R.id.classe);
         seat = (TextView) findViewById(R.id.seat);
         number = (TextView) findViewById(R.id.number_passenger);
+        pay = (Button) findViewById(R.id.pay);
+        add_passenger = (ImageView) findViewById(R.id.add_passenger);
+        change_place = (ImageView) findViewById(R.id.change_place);
 
         extras = getIntent().getExtras();
         img_agence.setImageBitmap(decodeSampledBitmapFromResource(getResources(), extras.getInt("image_agence"), 32, 32));
@@ -90,6 +102,50 @@ public class TicketActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent main = new Intent(TicketActivity.this, BookActivity.class);
                 startActivity(main);
+            }
+        });
+
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pay = new Intent(TicketActivity.this, PaiementState.class);
+                startActivity(pay);
+            }
+        });
+
+        add_passenger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(TicketActivity.this);
+                dialog.setContentView(R.layout.activity_popup5);
+                Button ok = dialog.findViewById(R.id.btn_ok_popup5);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        dialog.dismiss();
+                    }
+                });
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        change_place.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(TicketActivity.this);
+                dialog.setContentView(R.layout.activity_popup7);
+                Button ok = dialog.findViewById(R.id.btn_ok_popup7);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        dialog.dismiss();
+                    }
+                });
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
             }
         });
     }

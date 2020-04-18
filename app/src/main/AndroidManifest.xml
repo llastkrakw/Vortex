@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vortex">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Popup.Popup7"></activity>
+        <activity android:name=".Popup.Popup6" />
+        <activity android:name=".Popup.Popup5" />
+        <activity android:name=".Popup.Popup4" />
+        <activity android:name=".Popup.Popup3" />
+        <activity android:name=".Popup.Popup2" />
+        <activity android:name=".Popup.Popup1" />
+        <activity android:name=".PaiementStates.PaiementStateOrangeOrMtn" />
+        <activity android:name=".PaiementStates.PaiementStateMode" />
+        <activity android:name=".PaiementStates.PaiementState" />
+        <activity android:name=".ProfileAndSetting.Setting" />
+        <activity android:name=".ProfileAndSetting.Profile" />
         <activity android:name=".main.TicketActivity"></activity>
         <activity android:name=".main.BookActivity" />
         <activity android:name=".main.MainActivity" />
@@ -31,6 +45,7 @@
             </intent-filter>
         </activity>
     </application>
+  
     <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

@@ -3,13 +3,17 @@ package com.example.vortex.main;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Switch;
@@ -21,6 +25,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
 import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
+import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
 import com.example.vortex.R;
 import com.example.vortex.main.fragments.BookListFragment;
 import com.example.vortex.main.fragments.CarteFragment;
@@ -50,6 +55,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView list;
     private ImageView location;
     private ImageView start;
+    private ImageView filter;
     private FloatingSearchView searchView;
     private FrameLayout fragmentContainer;
     private FragmentManager fragmentManager;
@@ -69,6 +75,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
         list = (ImageView) findViewById(R.id.list_buttton);
         location = (ImageView) findViewById(R.id.location_button);
         start = (ImageView) findViewById(R.id.ratting_button);
+        filter = (ImageView) findViewById(R.id.filter);
         list.setBackground(getResources().getDrawable(R.drawable.button_list_bg));
         location.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
         start.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
@@ -170,6 +177,23 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentByTag("com.mapbox.map");
         }
 
+
+        filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog = new Dialog(BookActivity.this);
+                dialog.setContentView(R.layout.activity_popup3);
+                ImageView ok = dialog.findViewById(R.id.close);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
 
     }
 
