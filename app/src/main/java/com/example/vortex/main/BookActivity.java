@@ -136,7 +136,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
 
 
-        Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));
+/*        Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));
 
         if (savedInstanceState == null) {
 
@@ -175,7 +175,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             });
         }else {
             mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentByTag("com.mapbox.map");
-        }
+        }*/
 
 
         filter.setOnClickListener(new View.OnClickListener() {
@@ -218,9 +218,11 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 start.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
                 //
                 //
-                final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.add(R.id.fragment_container, mapFragment, "com.mapbox.map");
-                transaction.commit();
+                //final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                Fragment mapFragment = CarteFragment.newInstance();
+                fragmentTransaction.add(R.id.fragment_container, mapFragment, "com.mapbox.map");
+                fragmentTransaction.commit();
                 break;
             case R.id.ratting_button:
                 list.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
