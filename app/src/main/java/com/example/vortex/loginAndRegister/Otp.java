@@ -29,12 +29,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.PhoneAuthCredential;
-import com.google.firebase.auth.PhoneAuthProvider;
+
 import com.hbb20.CountryCodePicker;
 import com.mikhaellopez.circularimageview.CircularImageView;
 import com.mukesh.OnOtpCompletionListener;
@@ -49,7 +44,7 @@ import retrofit2.Response;
 
 public class Otp extends AppCompatActivity {
 
-    private CountryCodePicker ccp;
+   /* private CountryCodePicker ccp;
     private EditText phoneText;
     private EditText codeText;
     private Button continueAndNextBtn;
@@ -59,7 +54,7 @@ public class Otp extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String mVerificationid;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
-    private ProgressDialog loadingBar;
+    private ProgressDialog loadingBar;*/
 
 
 
@@ -67,7 +62,7 @@ public class Otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-        mAuth=FirebaseAuth.getInstance();
+       /* mAuth=FirebaseAuth.getInstance();
         loadingBar=new ProgressDialog(this);
 
 
@@ -185,12 +180,12 @@ public class Otp extends AppCompatActivity {
 
                         }
                     }
-                });
+                });*/
     }
-    private void sendUserToMainActivity()
+  /*  private void sendUserToMainActivity()
     {
         Intent intent=new Intent(Otp.this, MainActivity.class);
         startActivity(intent);
         finish();
-    }
+    }*/
 }
