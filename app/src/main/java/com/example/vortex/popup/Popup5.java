@@ -1,4 +1,4 @@
-package com.example.vortex.Popup;
+package com.example.vortex.popup;
 
 import androidx.appcompat.app.AppCompatActivity;
 

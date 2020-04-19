@@ -152,6 +152,8 @@
     <string name="seat">5A</string>
     <string name="class_title">Class</string>
     <string name="add_passenger">+1</string>
+    <string name="user_location_permission_explanation">Activer la localisation !</string>
+    <string name="user_location_permission_not_granted">Autoriser la localisation !</string>
     <string-array name="query_suggestions">
         <item>Douala</item>
         <item>Yaounde</item>

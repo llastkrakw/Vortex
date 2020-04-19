@@ -1,4 +1,4 @@
-package com.example.vortex.Popup;
+package com.example.vortex.popup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.vortex.R;
 
-public class Popup3 extends AppCompatActivity {
+public class Popup7 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popup3);
+        setContentView(R.layout.activity_popup7);
     }
 }

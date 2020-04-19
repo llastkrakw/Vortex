@@ -1,4 +1,4 @@
-package com.example.vortex.PaiementStates;
+package com.example.vortex.paiementStates;
 
 import androidx.appcompat.app.AppCompatActivity;
 

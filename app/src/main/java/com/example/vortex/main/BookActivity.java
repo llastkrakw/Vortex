@@ -8,47 +8,40 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
-import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
-import androidx.appcompat.widget.Toolbar;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
-import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
-import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
 import com.example.vortex.R;
 import com.example.vortex.main.fragments.BookListFragment;
-import com.example.vortex.main.fragments.CarteFragment;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
 import com.luseen.spacenavigation.SpaceOnClickListener;
 
+import com.mapbox.android.core.permissions.PermissionsListener;
+import com.mapbox.android.core.permissions.PermissionsManager;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.camera.CameraPosition;
 import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.maps.MapView;
+import com.mapbox.mapboxsdk.location.LocationComponent;
+import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions;
+import com.mapbox.mapboxsdk.location.modes.CameraMode;
+import com.mapbox.mapboxsdk.location.modes.RenderMode;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.maps.SupportMapFragment;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.ListIterator;
 
-public class BookActivity extends AppCompatActivity implements View.OnClickListener {
+public class BookActivity extends AppCompatActivity implements View.OnClickListener, PermissionsListener {
 
     private SpaceNavigationView spaceNavigationView;
     private ImageView back;
@@ -61,6 +54,8 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private SupportMapFragment mapFragment;
+    private MapboxMap mapboxMap;
+    private PermissionsManager permissionsManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,7 +131,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
 
 
-/*        Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));
+        Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));
 
         if (savedInstanceState == null) {
 
@@ -162,12 +157,13 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             mapFragment.getMapAsync(new OnMapReadyCallback() {
                 @Override
                 public void onMapReady(@NonNull MapboxMap mapboxMap) {
-                    mapboxMap.setStyle(Style.SATELLITE, new Style.OnStyleLoaded() {
+                    BookActivity.this.mapboxMap = mapboxMap;
+                    mapboxMap.setStyle(Style.OUTDOORS, new Style.OnStyleLoaded() {
                         @Override
                         public void onStyleLoaded(@NonNull Style style) {
 
                             // Map is set up and the style has loaded. Now you can add data or make other map adjustments
-
+                            enableLocationComponent(style);
 
                         }
                     });
@@ -175,7 +171,7 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             });
         }else {
             mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentByTag("com.mapbox.map");
-        }*/
+        }
 
 
         filter.setOnClickListener(new View.OnClickListener() {
@@ -218,11 +214,9 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 start.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
                 //
                 //
-                //final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                Fragment mapFragment = CarteFragment.newInstance();
-                fragmentTransaction.add(R.id.fragment_container, mapFragment, "com.mapbox.map");
-                fragmentTransaction.commit();
+                final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.add(R.id.fragment_container, mapFragment, "com.mapbox.map");
+                transaction.commit();
                 break;
             case R.id.ratting_button:
                 list.setBackground(getResources().getDrawable(R.drawable.button_list_bg2));
@@ -231,4 +225,59 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    @SuppressWarnings( {"MissingPermission"})
+    private void enableLocationComponent(@NonNull Style loadedMapStyle) {
+      // Check if permissions are enabled and if not request
+        if (PermissionsManager.areLocationPermissionsGranted(this)) {
+
+        // Get an instance of the LocationComponent.
+            LocationComponent locationComponent = mapboxMap.getLocationComponent();
+
+        // Activate the LocationComponent
+            locationComponent.activateLocationComponent(
+                    LocationComponentActivationOptions.builder(this, loadedMapStyle).build());
+
+         // Enable the LocationComponent so that it's actually visible on the map
+            locationComponent.setLocationComponentEnabled(true);
+
+        // Set the LocationComponent's camera mode
+            locationComponent.setCameraMode(CameraMode.TRACKING);
+
+      // Set the LocationComponent's render mode
+            locationComponent.setRenderMode(RenderMode.NORMAL);
+        } else {
+            permissionsManager = new PermissionsManager(this);
+            permissionsManager.requestLocationPermissions(this);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        permissionsManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    @Override
+    public void onExplanationNeeded(List<String> permissionsToExplain) {
+        Toast.makeText(this, R.string.user_location_permission_explanation, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onPermissionResult(boolean granted) {
+        if (granted) {
+            mapboxMap.getStyle(new Style.OnStyleLoaded() {
+                @Override
+                public void onStyleLoaded(@NonNull Style style) {
+                    enableLocationComponent(style);
+                }
+            });
+        } else {
+            Toast.makeText(this, R.string.user_location_permission_not_granted, Toast.LENGTH_LONG).show();
+            finish();
+        }
+    }
+
 }
+
+
+

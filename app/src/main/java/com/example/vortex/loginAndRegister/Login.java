@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
-import com.example.vortex.ProfileAndSetting.Setting;
 import com.example.vortex.R;
 import com.example.vortex.main.MainActivity;
 

@@ -21,8 +21,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.vortex.ProfileAndSetting.Profile;
-import com.example.vortex.ProfileAndSetting.Setting;
+import com.example.vortex.profileAndSetting.Profile;
+import com.example.vortex.profileAndSetting.Setting;
 import com.example.vortex.R;
 import com.example.vortex.main.BookActivity;
 

@@ -13,8 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.vortex.PaiementStates.PaiementState;
-import com.example.vortex.PaiementStates.PaiementStateOrangeOrMtn;
+import com.example.vortex.paiementStates.PaiementState;
 import com.example.vortex.R;
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
