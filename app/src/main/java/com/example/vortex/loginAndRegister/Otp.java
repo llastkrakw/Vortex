@@ -1,10 +1,13 @@
 package com.example.vortex.loginAndRegister;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -48,6 +51,7 @@ public class Otp extends AppCompatActivity {
     String OTP = "";
     Random random = new Random();
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +65,13 @@ public class Otp extends AppCompatActivity {
         buttonCode = (Button) findViewById(R.id.buttonCode);
 
         //otpview.setItemRadius(10);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+
+        String txt=pref.getString("Nam", null);
+        username.setText(txt);
+        Long numb=pref.getLong("Number", 0);
+       // Long.parseLong(user_number.setText(numb));
+
 
         //
         // Set Color
@@ -122,8 +133,8 @@ public class Otp extends AppCompatActivity {
                 });*/
 
 
-              Intent main = new Intent(Otp.this, MainActivity.class);
-              startActivity(main);
+                Intent main = new Intent(Otp.this, MainActivity.class);
+                startActivity(main);
 
             }
         });

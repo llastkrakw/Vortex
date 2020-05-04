@@ -103,4 +103,15 @@
     <string name="please_verified">Please verified your</string>
     <string name="internet_connection">internet connection</string>
     <string name="close">Close</string>
+
+    <string-array name="codep">
+        <item>237</item>
+        <item>32</item>
+        <item>56</item>
+        <item>225</item>
+        <item>242</item>
+        <item>233</item>
+        <item>353</item>
+        <item>52</item>
+    </string-array>
 </resources>
