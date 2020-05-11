@@ -1,12 +1,13 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.util.Objects;
 
-
+@Entity
 public class User {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String username;
     private String email;
@@ -70,26 +71,4 @@ public class User {
         Password = password;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(email, user.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(email);
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", Password='" + Password + '\'' +
-                '}';
-    }
 }

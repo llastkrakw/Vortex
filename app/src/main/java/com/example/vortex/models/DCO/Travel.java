@@ -1,5 +1,6 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -7,43 +8,32 @@ import androidx.room.PrimaryKey;
 import java.util.Date;
 import java.util.Objects;
 
-
+@Entity(foreignKeys = {@ForeignKey(entity = Agence.class, parentColumns = "id", childColumns = "agenceid") } )
 public class Travel {
-
+    @PrimaryKey(autoGenerate = true)
     private int id;
-    private Agence agence;
+    @ColumnInfo(name = "agenceid")
+    private int agenceid;
     private boolean isFinish;
-
-    private enum travelStatus{
-        finish,
-        ready,
-        wait
-    }
-
-    private enum classes{
-        Vip,
-        classic
-    }
-
-    private travelStatus status;
-    private City cityDepart;
-    private City cityArrival;
+    private String status;
+    private String cityDepart;
+    private String cityArrival;
     private Date departureDate;
     private String departHr;
     private String arrivalHr;
     private int duration;
-    private classes travelclass;
+    private String travelclass;
     private double amount;
     private int nbPlaces;
     private int nbPlacesRest;
     private int loveItems = 0;
 
-    public Travel(int id, Agence agence, boolean isFinish, travelStatus status, City cityDepart,
-                  City cityArrival, Date departureDate, String departHr, String arrivalHr,
-                  int duration, classes travelclass, double amount, int nbPlaces, int nbPlacesRest) {
+    public Travel(int id, int agence, boolean isFinish, String status, String cityDepart,
+                  String cityArrival, Date departureDate, String departHr, String arrivalHr,
+                  int duration, String travelclass, double amount, int nbPlaces, int nbPlacesRest) {
 
         this.id = id;
-        this.agence = agence;
+        this.agenceid = agence;
         this.isFinish = isFinish;
         this.status = status;
         this.cityDepart = cityDepart;
@@ -52,10 +42,14 @@ public class Travel {
         this.departHr = departHr;
         this.arrivalHr = arrivalHr;
         this.duration = duration;
-        this.travelclass = travelclass;
+        //this.travelclass = travelclass;
         this.amount = amount;
         this.nbPlaces = nbPlaces;
         this.nbPlacesRest = nbPlacesRest;
+
+    }
+
+    public Travel() {
 
     }
 
@@ -67,12 +61,12 @@ public class Travel {
         this.id = id;
     }
 
-    public Agence getAgence() {
-        return agence;
+    public int getAgenceid() {
+        return agenceid;
     }
 
-    public void setAgence(Agence agence) {
-        this.agence = agence;
+    public void setAgenceid(int agence) {
+        this.agenceid = agence;
     }
 
     public boolean isFinish() {
@@ -83,27 +77,27 @@ public class Travel {
         isFinish = finish;
     }
 
-    public travelStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(travelStatus status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public City getCityDepart() {
+    public String getCityDepart() {
         return cityDepart;
     }
 
-    public void setCityDepart(City cityDepart) {
+    public void setCityDepart(String cityDepart) {
         this.cityDepart = cityDepart;
     }
 
-    public City getCityArrival() {
+    public String getCityArrival() {
         return cityArrival;
     }
 
-    public void setCityArrival(City cityArrival) {
+    public void setCityArrival(String cityArrival) {
         this.cityArrival = cityArrival;
     }
 
@@ -139,11 +133,11 @@ public class Travel {
         this.duration = duration;
     }
 
-    public classes getTravelclass() {
+    public String getTravelclass() {
         return travelclass;
     }
 
-    public void setTravelclass(classes travelclass) {
+    public void setTravelclass(String travelclass) {
         this.travelclass = travelclass;
     }
 
@@ -179,32 +173,4 @@ public class Travel {
         this.loveItems = loveItems;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Travel travel = (Travel) o;
-        return id == travel.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Travel{" +
-                "id=" + id +
-                ", agence=" + agence +
-                ", status=" + status +
-                ", cityDepart=" + cityDepart +
-                ", cityArrival=" + cityArrival +
-                ", departureDate=" + departureDate +
-                ", travelclass=" + travelclass +
-                ", amount=" + amount +
-                ", nbPlaces=" + nbPlaces +
-                ", nbPlacesRest=" + nbPlacesRest +
-                '}';
-    }
 }

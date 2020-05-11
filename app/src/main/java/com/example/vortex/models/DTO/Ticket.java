@@ -1,8 +1,13 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
+
 import java.util.Objects;
 
 public class Ticket {
+
     private int id;
     private Account account;
     private Travel travel;

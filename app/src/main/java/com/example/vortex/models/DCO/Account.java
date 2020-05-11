@@ -1,30 +1,40 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
+@Entity(foreignKeys = @ForeignKey(entity = User.class,
+        parentColumns = "id",
+        childColumns = "userid"))
 public class Account {
-
+    @PrimaryKey(autoGenerate = true)
     private int id;
-    private User user;
-    private ArrayList<Coupon> coupons;
-    private ArrayList<Agence> favorite;
-    private ArrayList<Ticket> tickets;
-    private ArrayList<Travel> travels;
-    private ArrayList<Travel> favTravel;
-    private int point = 200;
+    @ColumnInfo(name = "userid")
+    private int userid;
+    //private ArrayList<Coupon> coupons;
+    //private ArrayList<Agence> favorite;
+    //private ArrayList<Ticket> tickets;
+    //private ArrayList<Travel> travels;
+    //private ArrayList<Travel> favTravel;
+    //private int point = 200;
 
-    public Account(int id, User user) {
+    public Account(int id, int user) {
         this.id = id;
-        this.user = user;
-        coupons = new ArrayList<Coupon>();
-        favorite = new ArrayList<Agence>();
-        tickets = new ArrayList<Ticket>();
-        travels = new ArrayList<Travel>();
-        favTravel = new ArrayList<Travel>();
+        this.userid = user;
+        //coupons = new ArrayList<Coupon>();
+        //favorite = new ArrayList<Agence>();
+        //tickets = new ArrayList<Ticket>();
+        //travels = new ArrayList<Travel>();
+        //favTravel = new ArrayList<Travel>();
+    }
+
+    public Account() {
+
     }
 
     public int getId() {
@@ -35,13 +45,13 @@ public class Account {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    public void setUserid(int user) {
+        this.userid = user;
+    }/*
 
     public ArrayList<Coupon> getCoupons() {
         return coupons;
@@ -89,26 +99,6 @@ public class Account {
 
     public void setPoint(int point) {
         this.point = point;
-    }
+    }*/
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Account account = (Account) o;
-        return id == account.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", user=" + user.getUsername() +
-                '}';
-    }
 }

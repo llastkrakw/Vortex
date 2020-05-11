@@ -1,4 +1,4 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -6,8 +6,9 @@ import androidx.room.PrimaryKey;
 import java.util.Objects;
 
 
+@Entity
 public class City {
-
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String code;
     private String name;
@@ -15,6 +16,14 @@ public class City {
     public City(String code, String name) {
         this.code = code;
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCode() {
@@ -33,24 +42,4 @@ public class City {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        City city = (City) o;
-        return Objects.equals(code, city.code);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(code);
-    }
-
-    @Override
-    public String toString() {
-        return "City{" +
-                "code='" + code + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }

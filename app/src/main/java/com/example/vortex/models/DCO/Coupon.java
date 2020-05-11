@@ -1,5 +1,6 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -8,22 +9,35 @@ import java.util.Date;
 import java.util.Objects;
 
 
-
+@Entity(foreignKeys = @ForeignKey(entity = Account.class,
+        parentColumns = "id",
+        childColumns = "accountid"))
 public class Coupon {
+    @PrimaryKey(autoGenerate = true)
     private int id;
+
     private Date dateExp;
+
     private boolean status;
+
     private double amount;
-    private Account account;
+
+    @ColumnInfo(name = "accountid")
+    private int accountid;
+
     private String methodPay;
 
-    public Coupon(int id, Date dateExp, boolean status, double amount, Account account, String methodPay) {
+    public Coupon(int id, Date dateExp, boolean status, double amount, int account, String methodPay) {
         this.id = id;
         this.dateExp = dateExp;
         this.status = status;
         this.amount = amount;
-        this.account = account;
+        this.accountid = account;
         this.methodPay = methodPay;
+    }
+
+    public Coupon() {
+
     }
 
     public Date getDateExp() {
@@ -43,12 +57,12 @@ public class Coupon {
     }
 
 
-    public Account getAccount() {
-        return account;
+    public int getAccountid() {
+        return accountid;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccountid(int account) {
+        this.accountid = account;
     }
 
     public String getMethodPay() {
@@ -75,25 +89,4 @@ public class Coupon {
         this.amount = amount;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Coupon coupon = (Coupon) o;
-        return id == coupon.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Coupon{" +
-                "id=" + id +
-                ", dateExp=" + dateExp +
-                ", amount=" + amount +
-                '}';
-    }
 }

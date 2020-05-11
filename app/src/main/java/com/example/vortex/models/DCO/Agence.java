@@ -1,13 +1,13 @@
-package com.example.vortex.models.DTO;
+package com.example.vortex.models.DCO;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.util.Objects;
 
-
+@Entity
 public class Agence {
-
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
     private String image;
@@ -52,24 +52,4 @@ public class Agence {
         this.status = status;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Agence agence = (Agence) o;
-        return id == agence.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public String toString() {
-        return "Agence{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
 }
