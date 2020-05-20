@@ -1,12 +1,8 @@
 package com.example.vortex.main.fragments;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,39 +11,27 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.animation.BaseAnimation;
-import com.chad.library.adapter.base.listener.OnItemClickListener;
+import com.example.vortex.ProfileAndSetting.Profile;
+import com.example.vortex.ProfileAndSetting.Setting;
 import com.example.vortex.R;
-import com.example.vortex.adapters.TravelSmalAdapter;
-import com.example.vortex.fakeForUi.TravelFake;
 import com.example.vortex.main.BookActivity;
 
 import org.angmarch.views.NiceSpinner;
 import org.angmarch.views.OnSpinnerItemSelectedListener;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-
-import static androidx.constraintlayout.widget.Constraints.TAG;
-import static com.example.vortex.main.fragments.AnimUtils.slideView;
 
 public class MainFragment extends Fragment{
 
@@ -57,6 +41,8 @@ public class MainFragment extends Fragment{
     private TextView arrival;
     private TextView depart;
     private ImageView historyButton;
+    private ImageView profile;
+    private ImageView setting;
     private Button date;
     private Button search;
     private List<String> dataset2;
@@ -78,10 +64,10 @@ public class MainFragment extends Fragment{
             arrival =  (TextView) rootView.findViewById(R.id.valueArrival);
             depart =  (TextView) rootView.findViewById(R.id.valueDepart);
             date = (Button) rootView.findViewById(R.id.date);
-            search = (Button) rootView.findViewById(R.id.search);
+            search = (Button) rootView.findViewById(R.id.pay);
             historyButton = (ImageView) rootView.findViewById(R.id.btnhistory);
-
-
+            profile = (ImageView) rootView.findViewById(R.id.profilemain);
+            setting = (ImageView) rootView.findViewById(R.id.setting);
         }
 
         List<String> dataset = new LinkedList<>(Arrays.asList("Douala", "Yaounde", "Bamenda", "Kousserie", "Bafang"));
@@ -104,6 +90,23 @@ public class MainFragment extends Fragment{
     @Override
     public void onResume() {
         super.onResume();
+
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profile = new Intent(context, Profile.class);
+                context.startActivity(profile);
+            }
+        });
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent setting = new Intent(context, Setting.class);
+                context.startActivity(setting);
+            }
+        });
+
         niceSpinner.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener() {
             @Override
             public void onItemSelected(NiceSpinner parent, View view, int position, long id) {
@@ -167,7 +170,5 @@ public class MainFragment extends Fragment{
         });
 
     }
-
-
 
 }
