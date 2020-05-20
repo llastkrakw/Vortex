@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blanc"
+        tools:context=".profileAndSetting.Profile">
+
+        <ImageView
+            android:id="@+id/backspace_blanc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/backspace_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
+
+        <ImageView
+            android:id="@+id/logoblanc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/logoblanc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toEndOf="@id/backspace_blanc"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="142dp"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logoblanc"
+            app:civ_shadow_color="#3f51b5"/>
+
+        <ImageView
+            android:id="@+id/add_profile_pic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/test"
+            android:src="@drawable/image_icon"
+            app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+            app:layout_constraintEnd_toEndOf="@id/profile_pic"
+            app:layout_constraintHorizontal_bias="0.843"
+            app:layout_constraintStart_toStartOf="@id/profile_pic"
+            app:layout_constraintTop_toTopOf="@id/profile_pic"
+            app:layout_constraintVertical_bias="0.9"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/user_name_profile"
+            style="@style/user_name_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/user_name_profile"
+            app:layout_constraintEnd_toEndOf="@id/profile_pic"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="@id/profile_pic"
+            app:layout_constraintTop_toBottomOf="@id/profile_pic"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="158dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_ground_btn_sign_in_login"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/user_name_profile"
+            app:layout_constraintStart_toStartOf="@id/user_name_profile"
+            app:layout_constraintTop_toBottomOf="@id/user_name_profile"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Gold"
+                android:textColor="#F9F222"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="experience"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="400dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ligne"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+            app:layout_constraintVertical_bias="0.009"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
+
+        <ImageView
+            android:id="@+id/point1_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/point1_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/test"/>
+
+        <TextView
+            android:id="@+id/point1"
+            style="@style/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/point1"
+            app:layout_constraintEnd_toEndOf="@id/point1_profile"
+            app:layout_constraintStart_toStartOf="@id/point1_profile"
+            app:layout_constraintTop_toBottomOf="@id/point1_profile"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/point2_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/test"
+            android:src="@drawable/point2_profile"
+            app:layout_constraintEnd_toStartOf="@+id/point3_profile"
+            app:layout_constraintStart_toEndOf="@id/point1_profile"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/point2"
+            style="@style/point"
+            android:layout_width="68dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/point2"
+            app:layout_constraintEnd_toEndOf="@id/point2_profile"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/point2_profile"
+            app:layout_constraintTop_toBottomOf="@id/point2_profile"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/point3_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/test"
+            android:src="@drawable/point3_propfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/divider"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/point3"
+            style="@style/point"
+            android:layout_width="68dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/point3"
+            app:layout_constraintEnd_toEndOf="@id/point3_profile"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/point3_profile"
+            app:layout_constraintTop_toBottomOf="@id/point3_profile"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/username_profile"
+            style="@style/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/username1_propfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/point1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_view_username_profile"
+            style="@style/textview"
+            android:layout_width="320dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
+            android:drawableEnd="@drawable/editer_profile"
+            android:hint="Bakari Potter"
+            android:textColorHint="#787474"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_profile"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/Email_profile"
+            style="@style/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Email_propfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_view_username_profile"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_view_Email_profile"
+            style="@style/textview"
+            android:layout_width="320dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
+            android:drawableEnd="@drawable/editer_profile"
+            android:hint="llastkrakw21@gmail.com"
+            android:textColorHint="#787474"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Email_profile"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/Telephone_profile"
+            style="@style/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Telephone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_view_Email_profile"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edit_view_telephone_profile"
+            style="@style/textview"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="48dp"
+            android:drawableEnd="@drawable/editer_profile"
+            android:hint="+237 691200485"
+            android:inputType="phone"
+            android:textColorHint="#787474"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Telephone_profile"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_password_profile"
+            style="@style/btn_password_profile"
+            android:layout_width="120dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="12dp"
+            android:elevation="25dp"
+            android:text="@string/password_profile"
+            android:textSize="16sp"
+            android:translationZ="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_view_telephone_profile"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_Save_profile"
+            style="@style/btn_Save_profile"
+            android:layout_width="120dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="25dp"
+            android:text="@string/save_profile"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_password_profile"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

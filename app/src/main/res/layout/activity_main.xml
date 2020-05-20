@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc"
+    tools:context=".main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fond"/>
+
+
+    <RelativeLayout
+        android:id="@+id/historyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/travel_container2"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:id="@+id/textHistory"
+            style="@style/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/history"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/btnhistory"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_toEndOf="@id/textHistory"
+            android:layout_marginStart="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/test"
+            android:src="@drawable/ic_history_gray_24dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/smalhistoryRecycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+    </RelativeLayout>
+
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        app:active_item_color="@color/important"
+        app:active_centre_button_background_color="@color/focusColor"
+        app:centre_button_color="@color/focusColor"
+        app:inactive_item_color="#FEFEFE"
+        app:space_background_color="@color/colorPrimaryDark"
+        app:centre_button_icon="@drawable/ic_confirmation_number_black_24dp"
+        app:active_centre_button_icon_color="@color/important"
+        app:inactive_centre_button_icon_color="#FEFEFE"
+        app:space_item_icon_size="32dp"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</RelativeLayout>

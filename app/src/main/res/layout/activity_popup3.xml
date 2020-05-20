@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="20sp"
+    android:layout_width="230dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    tools:context=".popup.Popup1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_popup2">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/paiement_state3_title"
+            style="@style/popup2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/popup3_title1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/close" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/popup2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/popup3_title2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup3_subtitle1" />
+
+        <TextView
+            android:id="@+id/popup3_subtitle1"
+            style="@style/popup2_subsubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/popup3_subtitle1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paiement_state3_title" />
+
+
+        <TextView
+            android:id="@+id/type"
+            style="@style/popup2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/popup3_title3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price1" />
+
+        <LinearLayout
+            android:id="@+id/Type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type">
+
+            <TextView
+                android:id="@+id/imageView17"
+                style="@style/Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup3_subsubtitle1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.221"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="318dp" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="67dp"
+                android:layout_height="38dp"
+                android:text="Switch1"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="347dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Type2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/type">
+
+            <TextView
+                android:id="@+id/paypal"
+                style="@style/Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popup3_subsubtitle2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.748"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="318dp" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="67dp"
+                android:layout_height="38dp"
+                android:text="Switch1"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="351dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price">
+
+            <TextView
+                android:id="@+id/popup3_subtitle2"
+                style="@style/popup2_subsubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/popup3_subtitle2"
+                tools:ignore="DuplicateIds"
+                tools:layout_editor_absoluteX="33dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/price"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/price1"
+                tools:layout_editor_absoluteX="33dp"
+                tools:layout_editor_absoluteY="180dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price">
+
+            <TextView
+                android:id="@+id/popup3_subtitle3"
+                style="@style/popup2_subsubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/popup3_subtitle3"
+                tools:layout_editor_absoluteX="144dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/price"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/price2"
+                tools:layout_editor_absoluteX="144dp"
+                tools:layout_editor_absoluteY="190dp" />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

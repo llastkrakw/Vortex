@@ -38,20 +38,12 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         spinner_code_phone = findViewById(R.id.register_spinner);
-        back = findViewById(R.id.icon_back);
         buttonRegister = findViewById(R.id.buttonRegister);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, table_spinner_code);
         spinner_code_phone.setAdapter(arrayAdapter);
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Register.this, Login.class);
-                startActivity(intent);
-            }
-        });
 
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="20sp"
+    android:layout_width="280dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    tools:context=".popup.Popup1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_popup1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="26dp">
+
+        <TextView
+            android:id="@+id/popup7_title"
+            style="@style/paiementstate3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/popup7_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioButton
+            android:id="@+id/b6"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b5"
+            app:layout_constraintTop_toBottomOf="@+id/b3"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b7"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b4"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b8"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b7"
+            app:layout_constraintTop_toBottomOf="@+id/b5"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b9"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b8"
+            app:layout_constraintTop_toBottomOf="@+id/b6"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b7"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b11"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b10"
+            app:layout_constraintTop_toBottomOf="@+id/b8"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b12"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b11"
+            app:layout_constraintTop_toBottomOf="@+id/b9"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b13"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b10"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b14"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b13"
+            app:layout_constraintTop_toBottomOf="@+id/b11"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b15"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b14"
+            app:layout_constraintTop_toBottomOf="@+id/b12"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b16"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b13"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b28"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b25"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b29"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b28"
+            app:layout_constraintTop_toBottomOf="@+id/b26"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b27"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b26"
+            app:layout_constraintTop_toBottomOf="@+id/b24"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b26"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b25"
+            app:layout_constraintTop_toBottomOf="@+id/b23"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b25"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b22"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b24"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b23"
+            app:layout_constraintTop_toBottomOf="@+id/b21"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b23"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b22"
+            app:layout_constraintTop_toBottomOf="@+id/b20"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b22"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b19"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b21"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b20"
+            app:layout_constraintTop_toBottomOf="@+id/b18"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b20"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b19"
+            app:layout_constraintTop_toBottomOf="@+id/b17"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b19"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b16"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b18"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b17"
+            app:layout_constraintTop_toBottomOf="@+id/b15"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b17"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b16"
+            app:layout_constraintTop_toBottomOf="@+id/b14"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_ok_popup7"
+            style="@style/btn_Ok_ps3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/btn_ok_ps3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            tools:ignore="MissingConstraints" />
+
+        <RadioButton
+            android:id="@+id/b30"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b29"
+            app:layout_constraintTop_toBottomOf="@+id/b27"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/popup6_title"
+            style="@style/paiementstate3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/popup7_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RadioButton
+            android:id="@+id/b1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <RadioButton
+            android:id="@+id/b2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b1"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <RadioButton
+            android:id="@+id/b33"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <RadioButton
+            android:id="@+id/b31"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b32"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <RadioButton
+            android:id="@+id/b34"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b35"
+            app:layout_constraintTop_toBottomOf="@+id/b31" />
+
+        <RadioButton
+            android:id="@+id/b38"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b39"
+            app:layout_constraintTop_toBottomOf="@+id/b35" />
+
+        <RadioButton
+            android:id="@+id/b42"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b39" />
+
+        <RadioButton
+            android:id="@+id/b41"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b42"
+            app:layout_constraintTop_toBottomOf="@+id/b38" />
+
+        <RadioButton
+            android:id="@+id/b45"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b42" />
+
+        <RadioButton
+            android:id="@+id/b48"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b45" />
+
+        <RadioButton
+            android:id="@+id/b49"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b50"
+            app:layout_constraintTop_toBottomOf="@+id/b46" />
+
+        <RadioButton
+            android:id="@+id/b50"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b51"
+            app:layout_constraintTop_toBottomOf="@+id/b47" />
+
+        <RadioButton
+            android:id="@+id/b51"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b48" />
+
+        <RadioButton
+            android:id="@+id/b52"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b53"
+            app:layout_constraintTop_toBottomOf="@+id/b49" />
+
+        <RadioButton
+            android:id="@+id/b53"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b54"
+            app:layout_constraintTop_toBottomOf="@+id/b50" />
+
+        <RadioButton
+            android:id="@+id/b54"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b51" />
+
+        <RadioButton
+            android:id="@+id/b56"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b57"
+            app:layout_constraintTop_toBottomOf="@+id/b53" />
+
+        <RadioButton
+            android:id="@+id/b55"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b56"
+            app:layout_constraintTop_toBottomOf="@+id/b52" />
+
+        <RadioButton
+            android:id="@+id/b57"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b54" />
+
+        <RadioButton
+            android:id="@+id/b58"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b59"
+            app:layout_constraintTop_toBottomOf="@+id/b55" />
+
+        <RadioButton
+            android:id="@+id/b59"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b60"
+            app:layout_constraintTop_toBottomOf="@+id/b56" />
+
+        <RadioButton
+            android:id="@+id/b60"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b57" />
+
+        <RadioButton
+            android:id="@+id/b47"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b48"
+            app:layout_constraintTop_toBottomOf="@+id/b44" />
+
+        <RadioButton
+            android:id="@+id/b46"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b47"
+            app:layout_constraintTop_toBottomOf="@+id/b43" />
+
+        <RadioButton
+            android:id="@+id/b44"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b45"
+            app:layout_constraintTop_toBottomOf="@+id/b41" />
+
+        <RadioButton
+            android:id="@+id/b43"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b44"
+            app:layout_constraintTop_toBottomOf="@+id/b40" />
+
+        <RadioButton
+            android:id="@+id/b40"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b41"
+            app:layout_constraintTop_toBottomOf="@+id/b37" />
+
+        <RadioButton
+            android:id="@+id/b39"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b36" />
+
+        <RadioButton
+            android:id="@+id/b37"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b38"
+            app:layout_constraintTop_toBottomOf="@+id/b34" />
+
+        <RadioButton
+            android:id="@+id/b36"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b33" />
+
+        <RadioButton
+            android:id="@+id/b35"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b36"
+            app:layout_constraintTop_toBottomOf="@+id/b32" />
+
+        <RadioButton
+            android:id="@+id/b32"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/b33"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <RadioButton
+            android:id="@+id/b3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b2"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <RadioButton
+            android:id="@+id/b4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+        <RadioButton
+            android:id="@+id/b5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rb_pers"
+            android:button="@color/transparent"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/b4"
+            app:layout_constraintTop_toBottomOf="@+id/b2" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="E"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="F"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup7_title" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b31"
+            app:layout_constraintStart_toEndOf="@+id/b3"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b34"
+            app:layout_constraintStart_toEndOf="@+id/b6"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b37"
+            app:layout_constraintStart_toEndOf="@+id/b9"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b40"
+            app:layout_constraintStart_toEndOf="@+id/b12"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b43"
+            app:layout_constraintStart_toEndOf="@+id/b15"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b46"
+            app:layout_constraintStart_toEndOf="@+id/b18"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b49"
+            app:layout_constraintStart_toEndOf="@+id/b21"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b52"
+            app:layout_constraintStart_toEndOf="@+id/b24"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b55"
+            app:layout_constraintStart_toEndOf="@+id/b27"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#2699FB"
+            android:textSize="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/b58"
+            app:layout_constraintStart_toEndOf="@+id/b30"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

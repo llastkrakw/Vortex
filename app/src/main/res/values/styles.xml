@@ -14,7 +14,11 @@
         <item name="android:textSize">32sp</item>
         <item name="android:textColor">@color/intro_title_color</item>
     </style>
-
+    <style name="point">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/noir</item>
+    </style>
     <style name="onboarding_body">
         <item name="android:fontFamily">@font/roboto_regular</item>
         <item name="android:textSize">18sp</item>
@@ -28,6 +32,42 @@
 
     </style>
 
+    <style name="user_name_profile">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+
+    <style name="setting_items">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+
+    <style name="textview">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/noir</item>
+    </style>
+
+    <style name="btn_password_profile">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/background_password_profile</item>
+    </style>
+    <style name="btn_Save_profile">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/back_ground_btn_sign_in_login</item>
+    </style>
 
     <style name="sub_title">
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -74,6 +114,16 @@
         <item name="android:textColor">@color/blanc</item>
     </style>
 
+    <style name="button2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/back_ground_btn_sign_in_login</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/blanc</item>
+    </style>
+
     <style name="spinner">
         <item name="android:background">@drawable/back_ground_spinner</item>
         <item name="android:textColor">@color/blanc</item>
@@ -82,5 +132,193 @@
         <item name="android:layout_height">52dp</item>
         <item name="android:colorPrimary" tools:targetApi="lollipop">@color/blanc</item>
     </style>
+    <style name="spinner2">
+        <item name="android:background">@drawable/back_ground_spinner</item>
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:colorPrimary" tools:targetApi="lollipop">@color/blanc</item>
+    </style>
 
+    <style name="paiementstate_title">
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+
+    <style name="paiementstate_subtitle">
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="paiementstate_Next">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/back_ground_btn_sign_in_login</item>
+    </style>
+    <style name="paiementstate_Pay">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/btn_pay_paiement_state</item>
+    </style>
+
+
+    <style name="paiementstate3_title">
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="popup2_title">
+        <item name="android:textColor">#3D3D3D</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="popup2_subtitle">
+        <item name="android:textColor">#AA55FF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="popup2_subsubtitle">
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="paiementstate3_subtitle">
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="btn_Ok_ps3">
+        <item name="android:background">@drawable/back_ground_spinner</item>
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">52dp</item>
+    </style>
+
+    <style name="price">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/btn_pay_paiement_state</item>
+    </style>
+    <style name="Type">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+    <style name="popup4_title">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+    <style name="popup4_subtitle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+    <style name="popup4_close">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#E65555</item>
+    </style>
+    <style name="popup4_retry">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#AA55FF</item>
+    </style>
+
+    <style name="popup5_title">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#3D3D3D</item>
+    </style>
+<!--    <style name="MaterialSearchViewStyle">
+        &lt;!&ndash; Background for the search bar &ndash;&gt;
+        <item name="searchBackground">@color/blanc</item>
+
+        &lt;!&ndash; Change voice icon &ndash;&gt;
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search_inverted</item>
+
+        &lt;!&ndash; Change clear text icon &ndash;&gt;
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close_inverted</item>
+
+        &lt;!&ndash; Change up icon &ndash;&gt;
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back_inverted</item>
+
+        &lt;!&ndash; Change icon for the suggestions &ndash;&gt;
+        <item name="searchSuggestionIcon">@drawable/ic_suggestion</item>
+
+        &lt;!&ndash; Change background for the suggestions list view &ndash;&gt;
+        <item name="searchSuggestionBackground">@android:color/white</item>
+
+        &lt;!&ndash; Change text color for edit text. This will also be the color of the cursor &ndash;&gt;
+        <item name="android:textColor">@color/noir</item>
+
+        &lt;!&ndash; Change hint text color for edit text &ndash;&gt;
+        <item name="android:textColorHint">@color/colorPrimary</item>
+
+        &lt;!&ndash; Hint for edit text &ndash;&gt;
+        <item name="android:hint">@string/search_hint</item>
+    </style>-->
+
+    <style name="SearchView">
+        <item name="floatingSearch_backgroundColor">@color/blanc</item>
+        <item name="floatingSearch_viewSearchInputTextColor">@color/noir</item>
+        <item name="floatingSearch_viewSuggestionItemTextColor">@color/colorPrimary</item>
+        <item name="floatingSearch_hintTextColor">#A3A6A6</item>
+        <item name="floatingSearch_dividerColor">@color/colorPrimaryDark</item>
+        <item name="floatingSearch_clearBtnColor">@color/important</item>
+        <item name="floatingSearch_leftActionColor">@color/colorPrimaryDark</item>
+        <item name="floatingSearch_menuItemIconColor">@color/noir</item>
+        <item name="floatingSearch_suggestionRightIconColor">@color/important</item>
+        <item name="floatingSearch_actionMenuOverflowColor">@color/colorPrimaryDark</item>
+    </style>
 </resources>
