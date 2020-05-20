@@ -6,12 +6,15 @@ import android.widget.Toast;
 
 import androidx.room.Room;
 
+import com.example.vortex.models.DAO.UserDAO;
 import com.example.vortex.models.DTO.User;
 import com.example.vortex.models.SaveDatabase;
 
+import java.util.List;
+
 public class UserRepository {
 
-    private String DB_NAME="UsersDB";
+    private String DB_NAME="USERDB";
     private SaveDatabase saveDatabase;
     Context context;
 
@@ -22,13 +25,13 @@ public class UserRepository {
         Toast.makeText(context,"Database Created .....",Toast.LENGTH_SHORT).show();
     }
 
-    public void InsertTask(final User user)
+   /* public void InsertTask(final User user)
     {
         new AsyncTask<Void,Void,Void>()
         {
             @Override
             protected Void doInBackground(Void... voids) {
-                saveDatabase.userDAO().InsertUser(user);
+                saveDatabase.userDao().InsertUser(user);
                 return null;
             }
 
@@ -39,5 +42,40 @@ public class UserRepository {
             }
         }.execute();
     }
+
+    /*public void CheckPassword(User user){
+        if
+    }
+
+    public void ReadStudent(String email, String password)
+    {
+        new AsyncTask<String, Void, Void>()
+        {
+            List<User> user=null;
+            @Override
+            protected Void doInBackground(String... strings) {
+                user= saveDatabase.userDAO().findByName(email, password);
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+
+                if(user==null)
+                {
+                    Toast.makeText(context,"Read Operation Failure",Toast.LENGTH_SHORT).show();
+                }
+                else if(user.size()==0)
+                {
+                    Toast.makeText(context,"User does noy exist",Toast.LENGTH_SHORT).show();
+                }
+
+                else{
+                    CheckPassword(user.get(0));
+                }
+            }
+        }.execute();
+    }*/
 }
 

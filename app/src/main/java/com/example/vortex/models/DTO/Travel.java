@@ -1,11 +1,14 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.Entity;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class Travel {
     private int id;
-    private Agence agence;
+    private int agence;
     private boolean isFinish;
 
     private enum travelStatus{
@@ -32,7 +35,7 @@ public class Travel {
     private int nbPlacesRest;
     private int loveItems = 0;
 
-    public Travel(int id, Agence agence, boolean isFinish, travelStatus status, City cityDepart,
+    public Travel(int id, int agence, boolean isFinish, travelStatus status, City cityDepart,
                   City cityArrival, Date departureDate, String departHr, String arrivalHr,
                   int duration, classes travelclass, double amount, int nbPlaces, int nbPlacesRest) {
 
@@ -61,11 +64,11 @@ public class Travel {
         this.id = id;
     }
 
-    public Agence getAgence() {
+    public int getAgence() {
         return agence;
     }
 
-    public void setAgence(Agence agence) {
+    public void setAgence(int agence) {
         this.agence = agence;
     }
 

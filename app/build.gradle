@@ -55,4 +55,8 @@ dependencies {
 
     implementation "android.arch.lifecycle:extensions:1.1.1"
 
+    //Add those line in dependencies
+    implementation files('build/mail.jar')
+
+
 }

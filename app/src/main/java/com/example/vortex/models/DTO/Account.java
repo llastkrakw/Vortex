@@ -1,13 +1,16 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.Entity;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
+@Entity
 public class Account {
     private int id;
     private User user;
     private ArrayList<Coupon> coupons;
-    private ArrayList<Agence> favorite;
+    private ArrayList<Agency> favorite;
     private ArrayList<Ticket> tickets;
     private ArrayList<Travel> travels;
     private ArrayList<Travel> favTravel;
@@ -17,7 +20,7 @@ public class Account {
         this.id = id;
         this.user = user;
         coupons = new ArrayList<Coupon>();
-        favorite = new ArrayList<Agence>();
+        favorite = new ArrayList<Agency>();
         tickets = new ArrayList<Ticket>();
         travels = new ArrayList<Travel>();
         favTravel = new ArrayList<Travel>();
@@ -47,11 +50,11 @@ public class Account {
         this.coupons = coupons;
     }
 
-    public ArrayList<Agence> getFavorite() {
+    public ArrayList<Agency> getFavorite() {
         return favorite;
     }
 
-    public void setFavorite(ArrayList<Agence> favorite) {
+    public void setFavorite(ArrayList<Agency> favorite) {
         this.favorite = favorite;
     }
 

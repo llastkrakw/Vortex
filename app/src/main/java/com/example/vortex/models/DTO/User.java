@@ -2,12 +2,19 @@ package com.example.vortex.models.DTO;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-@Entity
-public class User {
+@Entity (tableName = "User",
+            indices ={ @Index(name="Mobile_Number",
+                              value = "Phone", unique = true),
+                        @Index(value = "Email", unique = true),
+                        @Index(value = "UserName", unique = true)
+            })
+public class User implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -18,11 +25,11 @@ public class User {
     @ColumnInfo(name = "Email")
     private String Email;
 
-    @ColumnInfo(name = "Phone")
-    private Long Phone;
-
     @ColumnInfo(name = "Code")
     private String Code;
+
+    @ColumnInfo(name = "Phone")
+    private String Phone;
 
     @ColumnInfo(name = "Password")
     private String Password;
@@ -30,7 +37,7 @@ public class User {
     @ColumnInfo(name = "CoPassword")
     private String CoPassword;
 
-    public User( Long phone,String username, String email, String password) {
+    public User( String phone,String username, String email, String password) {
 
         this.Phone = phone;
         this.Username = username;
@@ -38,12 +45,20 @@ public class User {
         Password = password;
     }
 
-    public User(String username, String email,String code, Long phone, String password) {
+    public User(String username, String email,String code, String phone, String password) {
         this.Username = username;
         this.Email = email;
         this.Code=code;
         this.Phone = phone;
         Password = password;
+    }
+    public User(String username, String email,String code, String phone, String password,  String copassword) {
+        this.Username = username;
+        this.Email = email;
+        this.Code=code;
+        this.Phone = phone;
+        Password = password;
+        CoPassword = copassword;
     }
 
     public User(){}
@@ -72,11 +87,11 @@ public class User {
         this.Email = email;
     }
 
-    public Long getPhone() {
+    public String getPhone() {
         return Phone;
     }
 
-    public void setPhone(Long phone) {
+    public void setPhone(String phone) {
         this.Phone = phone;
     }
 

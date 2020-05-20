@@ -1,14 +1,27 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.Objects;
 
-public class Agence {
+@Entity (tableName = "Agency")
+public class Agency {
+    @PrimaryKey (autoGenerate = true)
+    @ColumnInfo(name = "Agence_ID")
     private int id;
+
+    @ColumnInfo(name = "Name")
     private String name;
+
+    @ColumnInfo(name = "Image")
     private String image;
+
+    @ColumnInfo(name = "Status")
     private boolean status;
 
-    public Agence(int id, String name, String image, boolean status) {
+    public Agency(int id, String name, String image, boolean status) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -51,7 +64,7 @@ public class Agence {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Agence agence = (Agence) o;
+        Agency agence = (Agency) o;
         return id == agence.id;
     }
 

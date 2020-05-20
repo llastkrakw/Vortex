@@ -1,17 +1,41 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Entity(tableName = "Coupon",
+        foreignKeys = {
+                @ForeignKey(
+                        entity = Account.class,
+                        parentColumns = "Account ID",
+                        childColumns = "Account_ID")})
 public class Coupon {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "Coupon_ID")
     private int id;
+
+    @ColumnInfo(name = "Expiration_Date")
     private Date dateExp;
+
+    @ColumnInfo(name = "Status")
     private boolean status;
+
+    @ColumnInfo(name = "Amount")
     private double amount;
-    private Account account;
+
+    @ColumnInfo(name = "Account_ID")
+    private int account;
+
+    @ColumnInfo(name = "Method_Pay")
     private String methodPay;
 
-    public Coupon(int id, Date dateExp, boolean status, double amount, Account account, String methodPay) {
+    public Coupon(int id, Date dateExp, boolean status, double amount, int account, String methodPay) {
         this.id = id;
         this.dateExp = dateExp;
         this.status = status;
@@ -37,11 +61,11 @@ public class Coupon {
     }
 
 
-    public Account getAccount() {
+    public int getAccount() {
         return account;
     }
 
-    public void setAccount(Account account) {
+    public void setAccount(int account) {
         this.account = account;
     }
 

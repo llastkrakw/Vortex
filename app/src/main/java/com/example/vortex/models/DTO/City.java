@@ -1,14 +1,35 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.Objects;
 
+@Entity(tableName = "City")
 public class City {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "City_ID")
+    private int Id;
+
+    @ColumnInfo(name = "Code")
     private String code;
+
+    @ColumnInfo(name = "Name")
     private String name;
 
     public City(String code, String name) {
         this.code = code;
         this.name = name;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getCode() {

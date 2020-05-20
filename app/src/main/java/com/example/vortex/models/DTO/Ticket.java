@@ -1,33 +1,58 @@
 package com.example.vortex.models.DTO;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
+
 import java.util.Objects;
 
+@Entity (tableName = "Ticket",
+        foreignKeys = {
+                @ForeignKey(
+                        entity = Account.class,
+                        parentColumns = "Account ID",
+                        childColumns = "Account_ID"),
+                @ForeignKey(
+                        entity = Travel.class,
+                        parentColumns = "Travel ID",
+                        childColumns = "Travel_ID") })
+
 public class Ticket {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "Ticket_ID")
     private int id;
-    private Account account;
-    private Travel travel;
+
+    @ColumnInfo(name = "Account_ID")
+    private int account;
+
+    @ColumnInfo(name = "Travel_ID")
+    private int travel;
+
+    @ColumnInfo(name = "Place")
     private String place;
 
-    public Ticket(int id, Account account, Travel travel, String place) {
+    public Ticket(int id, int account, int travel, String place) {
         this.id = id;
         this.account = account;
         this.travel = travel;
         this.place = place;
     }
 
-    public Account getAccount() {
+    public int getAccount() {
         return account;
     }
 
-    public void setAccount(Account account) {
+    public void setAccount(int account) {
         this.account = account;
     }
 
-    public Travel getTravel() {
+    public int getTravel() {
         return travel;
     }
 
-    public void setTravel(Travel travel) {
+    public void setTravel(int travel) {
         this.travel = travel;
     }
 
@@ -63,7 +88,7 @@ public class Ticket {
         return Objects.hash(id);
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
@@ -71,5 +96,5 @@ public class Ticket {
                 ", travel=" + travel.getAmount() +
                 ", place='" + place + '\'' +
                 '}';
-    }
+    }*/
 }
