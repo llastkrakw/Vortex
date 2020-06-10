@@ -18,6 +18,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
+import com.arlib.floatingsearchview.suggestions.model.SearchSuggestion;
 import com.example.vortex.R;
 import com.example.vortex.main.fragments.BookListFragment;
 import com.luseen.spacenavigation.SpaceItem;
@@ -40,6 +41,8 @@ import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.maps.SupportMapFragment;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BookActivity extends AppCompatActivity implements View.OnClickListener, PermissionsListener {
 
@@ -110,25 +113,29 @@ public class BookActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        searchView = (FloatingSearchView) findViewById(R.id.search_view);
-
-        searchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
-            @Override
-            public void onSearchTextChanged(String oldQuery, final String newQuery) {
-
-                //get suggestions based on newQuery
-
-                Toast.makeText(BookActivity.this, newQuery, Toast.LENGTH_LONG).show();
-
-                //pass them on to the search view
-                //searchView.swapSuggestions();
-            }
-        });
-
         fragmentTransaction = fragmentManager.beginTransaction();
-        Fragment fragment = BookListFragment.newInstance();
+        BookListFragment fragment = BookListFragment.newInstance();
         fragmentTransaction.add(R.id.fragment_container,  fragment);
         fragmentTransaction.commit();
+
+
+        searchView = (FloatingSearchView) findViewById(R.id.search_view);
+
+
+
+        searchView.setOnSearchListener(new FloatingSearchView.OnSearchListener() {
+            @Override
+            public void onSuggestionClicked(SearchSuggestion searchSuggestion) {
+
+            }
+
+            @Override
+            public void onSearchAction(String currentQuery) {
+                Toast.makeText(BookActivity.this, currentQuery, Toast.LENGTH_LONG).show();
+
+                fragment.RecyclerUpdater(currentQuery);
+            }
+        });
 
 
         Mapbox.getInstance(BookActivity.this, getString(R.string.map_token));

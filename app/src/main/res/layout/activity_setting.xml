@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
-            android:text="Gold"
+            android:text="@string/gold"
             android:textColor="#F9F222"
             android:textSize="12sp"
             tools:ignore="MissingConstraints" />
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5sp"
             android:fontFamily="@font/poppins_medium"
-            android:text="experience"
+            android:text="@string/experience"
             android:textColor="#fff"
             android:textSize="12sp"
             tools:ignore="MissingConstraints" />

@@ -2,9 +2,12 @@ package com.example.vortex.profileAndSetting;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.vortex.R;
@@ -15,13 +18,14 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 public class Profile extends AppCompatActivity {
 
     private CircularImageView userprofile;
+    private TextView userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        userName = (TextView) findViewById(R.id.user_name_profile);
         userprofile = (CircularImageView) findViewById(R.id.profile_pic);
-
         //otpview.setItemRadius(10);
 
         //

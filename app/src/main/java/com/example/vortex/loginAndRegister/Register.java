@@ -9,11 +9,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.vortex.R;
+import com.example.vortex.dataAcess.DatabaseHandler;
+import com.example.vortex.dataAcess.Encrypt;
+import com.example.vortex.models.DTO.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -21,9 +25,19 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Register extends AppCompatActivity {
 
+    private DatabaseHandler bd;
+    private EditText Username;
+    private EditText Email;
+    private EditText Password;
+    private EditText Confirm;
+    private EditText Phone;
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN=0;
     private Spinner spinner_code_phone;
@@ -37,6 +51,12 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+        Username = (EditText) findViewById(R.id.register_username);
+        Email = (EditText) findViewById(R.id.register_email);
+        Phone = (EditText) findViewById(R.id.register_phone);
+        Password = (EditText) findViewById(R.id.register_password);
+        Confirm = (EditText) findViewById(R.id.register_password_verify);
         spinner_code_phone = findViewById(R.id.register_spinner);
         buttonRegister = findViewById(R.id.buttonRegister);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, table_spinner_code);
@@ -55,8 +75,23 @@ public class Register extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Register.this, Otp.class);
-                startActivity(intent);
+                String phoneNumber = spinner_code_phone.getSelectedItem().toString() + Phone.getText().toString();
+                boolean testRegister = register(Username.getText().toString(), Email.getText().toString(),
+                        phoneNumber, Password.getText().toString().trim(), Confirm.getText().toString());
+
+                if(testRegister){
+                    Intent intent = new Intent(Register.this, Otp.class);
+                    intent.putExtra("number", phoneNumber);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(Register.this, "Remplissez bien les Champs", Toast.LENGTH_LONG).show();
+                    Username.setText("");
+                    Email.setText("");
+                    Phone.setText("");
+                    Password.setText("");
+                    Confirm.setText("");
+                }
             }
         });
 
@@ -131,5 +166,51 @@ public class Register extends AppCompatActivity {
         }
     }
 
+    private boolean register(String username, String email, String phone, String password, String confirm){
 
+        bd = new DatabaseHandler(Register.this);
+
+        boolean v1 = true;
+        boolean v2 = true;
+        boolean v3 = true;
+
+        if(!password.equals(confirm)){
+            v3 = false;
+        }
+
+        if(!isEmailValid(email)){
+            v2 = false;
+        }
+
+        if(v1 && v2 && v3){
+            User user = new User();
+            user.setUsername(username);
+            user.setEmail(email);
+            user.setPhone(phone);
+            user.setPassword(password);
+            bd.addUser(user);
+            bd.close();
+        }
+
+        return v1 && v2 && v3;
+    }
+
+    public boolean isEmailValid(String email)
+    {
+        String regExpn =
+                "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                        +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                        +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                        +"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                        +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                        +"([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
+
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(regExpn,Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+
+        return matcher.matches();
+
+    }
 }

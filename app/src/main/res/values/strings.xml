@@ -154,6 +154,9 @@
     <string name="add_passenger">+1</string>
     <string name="user_location_permission_explanation">Activer la localisation !</string>
     <string name="user_location_permission_not_granted">Autoriser la localisation !</string>
+    <string name="experience">experience</string>
+    <string name="gold">Gold</string>
+    <string name="confirm">Confirm</string>
     <string-array name="query_suggestions">
         <item>Douala</item>
         <item>Yaounde</item>

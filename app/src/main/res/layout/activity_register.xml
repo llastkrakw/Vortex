@@ -142,7 +142,7 @@
             android:autofillHints="@string/test"
             android:inputType="textPassword"
             tools:ignore="LabelFor"
-            android:hint="@string/hint_password"/>
+            android:hint="@string/confirm"/>
 
         <LinearLayout
             android:id="@+id/register_linear2"

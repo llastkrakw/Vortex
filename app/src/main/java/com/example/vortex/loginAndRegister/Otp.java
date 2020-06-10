@@ -3,9 +3,12 @@ package com.example.vortex.loginAndRegister;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -42,8 +45,11 @@ public class Otp extends AppCompatActivity {
     private OtpView otpview;
     private EditText user_number;
     private Button buttonCode;
+    private String number;
+    private Bundle extras;
     private String  API_KEY = "a1094647-6b4a-11ea-9fa5-0200cd936042";
     private String sessionId;
+    private static int RESULT_LOAD_IMAGE = 1;
 
     String OTP = "";
     Random random = new Random();
@@ -53,12 +59,28 @@ public class Otp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
 
+        extras = getIntent().getExtras();
+
+        assert extras != null;
+        number = extras.getString("number");
 
         userprofile = (CircularImageView) findViewById(R.id.profileVerif);
         username = (TextView) findViewById(R.id.usernameVerif);
         otpview = (OtpView) findViewById(R.id.otp_view);
         user_number = (EditText) findViewById(R.id.phoneverif);
         buttonCode = (Button) findViewById(R.id.buttonCode);
+
+        user_number.setText(number);
+
+        userprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(i, RESULT_LOAD_IMAGE);
+            }
+        });
 
         //otpview.setItemRadius(10);
 
@@ -166,5 +188,22 @@ public class Otp extends AppCompatActivity {
         });
 */
 
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+            assert selectedImage != null;
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            assert cursor != null;
+            cursor.moveToFirst();
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+            userprofile.setImageBitmap(BitmapFactory.decodeFile(picturePath));
+        }
     }
 }

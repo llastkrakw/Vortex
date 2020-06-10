@@ -3,16 +3,53 @@ package com.example.vortex.models.DTO;
 import java.util.Objects;
 
 public class User {
+    private int id;
     private String username;
     private String email;
     private String phone;
     private String Password;
+    private String createAt;
+
 
     public User(String username, String email, String phone, String password) {
         this.username = username;
         this.email = email;
         this.phone = phone;
         Password = password;
+        this.createAt = createAt;
+    }
+
+    public User(String username, String email, String phone, String password, String createAt) {
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        Password = password;
+        this.createAt = createAt;
+    }
+
+    public User(int id,String username, String email, String phone, String password, String createAt) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        Password = password;
+        this.createAt = createAt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(String createAt) {
+        this.createAt = createAt;
     }
 
     public User(){}

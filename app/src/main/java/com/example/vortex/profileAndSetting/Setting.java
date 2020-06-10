@@ -2,12 +2,16 @@ package com.example.vortex.profileAndSetting;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.vortex.R;
+import com.example.vortex.main.MainActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -15,13 +19,22 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 public class Setting extends AppCompatActivity{
 
     private CircularImageView userprofile;
+    private TextView userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-
+        userName = (TextView) findViewById(R.id.user_name_profile);
         userprofile = (CircularImageView) findViewById(R.id.profile_pic);
+
+        userName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profile = new Intent(Setting.this, Profile.class);
+                startActivity(profile);
+            }
+        });
 
         //otpview.setItemRadius(10);
 
@@ -55,7 +68,8 @@ public class Setting extends AppCompatActivity{
             String personId = acct.getId();
             Uri personPhoto = acct.getPhotoUrl();
 
-            Glide.with(this).load(String.valueOf(personPhoto)).into(userprofile);
+            if(personPhoto != null)
+                Glide.with(this).load(String.valueOf(personPhoto)).into(userprofile);
         }
 
     }
