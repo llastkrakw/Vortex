@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.vortex.R;
 import com.example.vortex.dataAcess.DatabaseHandler;
 import com.example.vortex.dataAcess.Encrypt;
+import com.example.vortex.main.MainActivity;
 import com.example.vortex.models.DTO.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -71,6 +72,7 @@ public class Register extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(Register.this, gso);
+
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +158,7 @@ public class Register extends AppCompatActivity {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
-            Intent intent = new Intent(Register.this, test.class);
+            Intent intent = new Intent(Register.this, Otp.class);
             startActivity(intent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.

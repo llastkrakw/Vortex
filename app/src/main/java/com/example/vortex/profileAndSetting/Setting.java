@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -20,6 +21,7 @@ public class Setting extends AppCompatActivity{
 
     private CircularImageView userprofile;
     private TextView userName;
+    private ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class Setting extends AppCompatActivity{
 
         userName = (TextView) findViewById(R.id.user_name_profile);
         userprofile = (CircularImageView) findViewById(R.id.profile_pic);
+        back = (ImageView) findViewById(R.id.backspace_blanc);
 
         userName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +71,18 @@ public class Setting extends AppCompatActivity{
             String personId = acct.getId();
             Uri personPhoto = acct.getPhotoUrl();
 
+            userName.setText(personName);
             if(personPhoto != null)
                 Glide.with(this).load(String.valueOf(personPhoto)).into(userprofile);
         }
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent main = new Intent(Setting.this, MainActivity.class);
+                startActivity(main);
+            }
+        });
 
     }
 

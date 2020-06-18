@@ -13,15 +13,15 @@
 
         <ImageView
             android:id="@+id/backspace_blanc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="17dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:contentDescription="@string/test"
             android:src="@drawable/backspace_black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            android:contentDescription="@string/test"/>
+            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/logoblanc"
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Gold"
+                android:text="@string/gold"
                 android:textColor="#F9F222"
                 android:textSize="12sp"
                 tools:ignore="MissingConstraints" />
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5sp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="experience"
+                android:text="@string/experience"
                 android:textColor="#fff"
                 android:textSize="12sp"
                 tools:ignore="MissingConstraints" />
@@ -227,7 +227,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:hint="Bakari Potter"
+            android:hint="@string/bakari_potter"
             android:textColorHint="#787474"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -257,7 +257,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:hint="llastkrakw21@gmail.com"
+            android:hint="@string/llastkrakw21_gmail_com"
             android:textColorHint="#787474"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -287,7 +287,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginEnd="48dp"
             android:drawableEnd="@drawable/editer_profile"
-            android:hint="+237 691200485"
+            android:hint="@string/_237_691200485"
             android:inputType="phone"
             android:textColorHint="#787474"
             app:layout_constraintEnd_toEndOf="parent"

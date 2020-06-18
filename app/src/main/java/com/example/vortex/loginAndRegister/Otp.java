@@ -61,8 +61,8 @@ public class Otp extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-        assert extras != null;
-        number = extras.getString("number");
+        if(extras != null)
+           number = extras.getString("number");
 
         userprofile = (CircularImageView) findViewById(R.id.profileVerif);
         username = (TextView) findViewById(R.id.usernameVerif);

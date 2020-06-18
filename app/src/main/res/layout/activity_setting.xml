@@ -9,7 +9,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".profileAndSetting.Setting">
+    tools:context=".profileAndSetting.Setting"
+    android:background="@color/blanc">
 
 
     <ImageView

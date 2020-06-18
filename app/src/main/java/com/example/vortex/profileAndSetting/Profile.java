@@ -7,10 +7,12 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.vortex.R;
+import com.example.vortex.main.MainActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -19,6 +21,7 @@ public class Profile extends AppCompatActivity {
 
     private CircularImageView userprofile;
     private TextView userName;
+    private ImageView back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,7 @@ public class Profile extends AppCompatActivity {
 
         userName = (TextView) findViewById(R.id.user_name_profile);
         userprofile = (CircularImageView) findViewById(R.id.profile_pic);
+        back = (ImageView) findViewById(R.id.backspace_blanc);
         //otpview.setItemRadius(10);
 
         //
@@ -58,8 +62,17 @@ public class Profile extends AppCompatActivity {
             String personId = acct.getId();
             Uri personPhoto = acct.getPhotoUrl();
 
+            userName.setText(personName);
             Glide.with(this).load(String.valueOf(personPhoto)).into(userprofile);
         }
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent main = new Intent(Profile.this, MainActivity.class);
+                startActivity(main);
+            }
+        });
 
     }
 }
